@@ -9,3 +9,4 @@ puzzles/*.log
 
 # Benchmark runs and check results
 bench/runs/
+bench/judge/votes.jsonl

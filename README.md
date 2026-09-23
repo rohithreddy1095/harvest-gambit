@@ -109,6 +109,18 @@ Before the puzzles, the plan was a public match played one move a day: followers
 most-liked legal reply is played. `hg.js` and `lib/` still run that game, including a parser that turns replies
 like `knight to f3!!` or `castle short` into legal moves (`node test.js` tests it). `./hg.js` lists the commands.
 
+## Harvest Bench
+
+`bench/` turns this project into a benchmark for AI coding agents. It includes:
+
+- a brief and a deliverables contract;
+- a container every agent works in;
+- a runner for Claude Code, Codex and Gemini CLI;
+- an automated checker that re-verifies the puzzles and plays them through the page;
+- blind side-by-side judging.
+
+See [bench/README.md](bench/README.md).
+
 ## Credits
 
 - [three.js](https://threejs.org) (MIT) for rendering, [chess.js](https://github.com/jhlywa/chess.js) (BSD-2-Clause)

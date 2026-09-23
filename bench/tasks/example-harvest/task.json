@@ -1,0 +1,8 @@
+{
+  "id": "example-harvest",
+  "title": "A chessboard in a wheat field",
+  "public": true,
+  "puzzles": { "count": 3, "mateIn": 3, "side": "w", "maxPieces": 16 },
+  "film": { "minSeconds": 50, "maxSeconds": 80 },
+  "minutes": { "build": 240, "feedback": 120 }
+}

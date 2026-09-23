@@ -1,0 +1,26 @@
+{
+  "claude": {
+    "about": "Claude Code (Anthropic). Headless flags checked against claude 2.1.280.",
+    "start": ["claude", "-p", "{prompt}", "--model", "{model}", "--output-format", "stream-json", "--verbose", "--dangerously-skip-permissions"],
+    "resume": ["claude", "-p", "{prompt}", "--continue", "--model", "{model}", "--output-format", "stream-json", "--verbose", "--dangerously-skip-permissions"],
+    "env": ["ANTHROPIC_API_KEY"],
+    "credentials": [".claude/.credentials.json"],
+    "usage": "claude"
+  },
+  "codex": {
+    "about": "Codex CLI (OpenAI). Headless flags checked against codex-cli 0.155.1.",
+    "start": ["codex", "exec", "--json", "--dangerously-bypass-approvals-and-sandbox", "--skip-git-repo-check", "-m", "{model}", "{prompt}"],
+    "resume": ["codex", "exec", "resume", "--last", "--json", "--dangerously-bypass-approvals-and-sandbox", "--skip-git-repo-check", "-m", "{model}", "{prompt}"],
+    "env": ["OPENAI_API_KEY"],
+    "credentials": [".codex/auth.json"],
+    "usage": "codex"
+  },
+  "gemini": {
+    "about": "Gemini CLI (Google). Headless flags checked against gemini 0.60.0.",
+    "start": ["gemini", "-p", "{prompt}", "-m", "{model}", "--approval-mode", "yolo", "--output-format", "stream-json"],
+    "resume": ["gemini", "-r", "latest", "-p", "{prompt}", "-m", "{model}", "--approval-mode", "yolo", "--output-format", "stream-json"],
+    "env": ["GEMINI_API_KEY", "GOOGLE_API_KEY"],
+    "credentials": [".gemini/oauth_creds.json", ".gemini/google_accounts.json", ".gemini/settings.json"],
+    "usage": "gemini"
+  }
+}

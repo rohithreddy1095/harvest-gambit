@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvest Bench judging</title>
+<style>
+:root { color-scheme: dark; --bg: #121310; --panel: #1b1d18; --line: #2e3229; --dim: #a3a597; --gold: #e2bf6e; --ink: #ecebe3; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; padding-inline: 16px; padding-block: 20px 40px; }
+header { max-width: 1500px; margin: 0 auto 16px; display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: baseline; justify-content: space-between; }
+h1 { margin: 0; font-size: 20px; font-weight: 600; }
+.dim { color: var(--dim); }
+label { color: var(--dim); font-size: 13px; }
+input[type=text] { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font: inherit; }
+main { max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+.side { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; gap: 10px; align-content: start; }
+.side h2 { margin: 0; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.side video, .side img { width: 100%; display: block; border-radius: 6px; background: #000; }
+.shots { display: grid; grid-template-columns: 2fr 2fr 1fr; gap: 8px; align-items: start; }
+.shots figure { margin: 0; } .shots figcaption { font-size: 12px; color: var(--dim); }
+form { max-width: 1500px; margin: 16px auto 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 12px; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+legend { float: left; width: 13em; color: var(--dim); }
+fieldset label { color: var(--ink); font-size: 14px; display: inline-flex; gap: 6px; align-items: center; }
+.overall legend { color: var(--ink); font-weight: 600; }
+button { font: 600 14px system-ui, sans-serif; border-radius: 8px; padding: 9px 18px; border: 1px solid var(--gold); background: var(--gold); color: #1e1805; cursor: pointer; justify-self: start; }
+button:disabled { opacity: .4; cursor: default; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+</style>
+<header>
+  <h1>Harvest Bench · <span id="task">__TASK__</span></h1>
+  <p class="dim" id="progress" aria-live="polite"></p>
+  <p><label for="judge">Your name, so your votes stay together </label><input id="judge" type="text" autocomplete="name"></p>
+</header>
+<main>
+  <section class="side" id="left" aria-label="Submission A"></section>
+  <section class="side" id="right" aria-label="Submission B"></section>
+</main>
+<form id="vote">
+  <p class="dim" style="margin:0">Judge what you see and could play. Ignore which one you think made it.</p>
+  <fieldset class="overall"><legend>Overall, which is better?</legend>
+    <label><input type="radio" name="overall" value="left" required> A</label><label><input type="radio" name="overall" value="right"> B</label><label><input type="radio" name="overall" value="tie"> Too close to call</label></fieldset>
+  <fieldset><legend>More realistic world</legend>
+    <label><input type="radio" name="realism" value="left"> A</label><label><input type="radio" name="realism" value="right"> B</label><label><input type="radio" name="realism" value="tie"> Same</label></fieldset>
+  <fieldset><legend>Better film</legend>
+    <label><input type="radio" name="film" value="left"> A</label><label><input type="radio" name="film" value="right"> B</label><label><input type="radio" name="film" value="tie"> Same</label></fieldset>
+  <fieldset><legend>Better to play</legend>
+    <label><input type="radio" name="play" value="left"> A</label><label><input type="radio" name="play" value="right"> B</label><label><input type="radio" name="play" value="tie"> Same</label></fieldset>
+  <button id="submit">Save vote and show the next pair</button>
+</form>
+<script>
+const $ = id => document.getElementById(id);
+let pair = null;
+try { $('judge').value = localStorage.getItem('judge') || ''; } catch {}
+function side(el, name, s) {
+  const url = f => `/media/${s.token}/${f}`, has = f => s.files.includes(f);
+  el.innerHTML = `<h2>${name}</h2>` +
+    (has('film.mp4') ? `<video src="${url('film.mp4')}" controls preload="metadata"></video>` : `<img src="${url('contact.jpg')}" alt="Film stills, every 2 seconds">`) +
+    (has('film.mp4') ? `<img src="${url('contact.jpg')}" alt="Film stills, every 2 seconds">` : '') +
+    `<div class="shots">` + ['play-desktop.png', 'play-solved.png', 'play-phone.png'].filter(has).map(f =>
+      `<figure><img src="${url(f)}" alt=""><figcaption>${{ 'play-desktop.png': 'Play page', 'play-solved.png': 'After solving #1', 'play-phone.png': 'Phone' }[f]}</figcaption></figure>`).join('') + `</div>`;
+}
+async function next() {
+  const r = await fetch(`/api/pair?judge=${encodeURIComponent($('judge').value || 'anonymous')}`); pair = await r.json();
+  side($('left'), 'A', pair.left); side($('right'), 'B', pair.right);
+  $('progress').textContent = `You have judged ${pair.voted} pair${pair.voted === 1 ? '' : 's'} · ${pair.total} possible pairs`;
+  $('vote').reset(); window.scrollTo(0, 0);
+}
+$('vote').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = new FormData($('vote')), judge = $('judge').value.trim() || 'anonymous';
+  try { localStorage.setItem('judge', judge); } catch {}
+  $('submit').disabled = true;
+  await fetch('/api/vote', { method: 'POST', body: JSON.stringify({ pairId: pair.pairId, judge, winner: f.get('overall'),
+    criteria: Object.fromEntries(['realism', 'film', 'play'].filter(k => f.get(k)).map(k => [k, f.get(k)])) }) });
+  $('submit').disabled = false; next();
+});
+next();
+</script>
+</html>
