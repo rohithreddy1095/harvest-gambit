@@ -17,7 +17,7 @@
     "generative"
   ],
   "author": "",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
   "dependencies": {
     "chess.js": "^1.4.0",

@@ -5,6 +5,9 @@ the farm, the carved pieces, the sky, the light and the soundtrack are all gener
 
 ![Puzzle #1 on the field at golden hour](docs/puzzle.jpg)
 
+**Play it:** https://rohithreddy1095.github.io/harvest-gambit/play/ (the film, playable live:
+https://rohithreddy1095.github.io/harvest-gambit/film/)
+
 It comes in two parts that share one world:
 
 - **The film.** A 66-second walk from a misty dawn aerial, down a farm road, through the gate between a 5.3 m King and
@@ -113,3 +116,7 @@ like `knight to f3!!` or `castle short` into legal moves (`node test.js` tests i
 - Puzzles from the [Lichess](https://lichess.org) open database (CC0).
 - Fonts from Google Fonts (SIL Open Font License): Cormorant Garamond, Hanken Grotesk and Caprasimo.
 - Written with [Claude](https://claude.ai) in one conversation.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The puzzles themselves are from Lichess and are in the public domain (CC0).
