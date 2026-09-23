@@ -144,10 +144,10 @@ async function tryMove(from, to) {
     tries[step]++;
     say(`After ${mv.san} the Crops slip away. Try another move.`, 'bad');
     await wait(1.0); game.undo(); await fieldUndo(info);
-    busy = false; return;
+    busy = false; return false;
   }
   clearMarks('last'); mark(geoSquare, GOLD, mv.from, 0.07, 'last'); mark(geoSquare, GOLD, mv.to, 0.11, 'last');
-  if (hit.mate) { played[step] = { w: mv.san }; await checkmate(); busy = false; return; }
+  if (hit.mate) { played[step] = { w: mv.san }; await checkmate(); busy = false; return true; }
   say(`${mv.san}. Good.`, 'good'); drawSteps();
   await wait(0.5);
   const reply = game.move(hit.reply);
@@ -156,7 +156,7 @@ async function tryMove(from, to) {
   node = hit.next; step++;
   clearMarks('last'); mark(geoSquare, GOLD, reply.from, 0.07, 'last'); mark(geoSquare, GOLD, reply.to, 0.11, 'last');
   say(`The Crops answer ${reply.san}. ${STEP_LEFT[step]}`);
-  drawSteps(); busy = false;
+  drawSteps(); busy = false; return true;
 }
 async function checkmate() {
   solved = true; drawSteps(); clearMarks('sel', 'target', 'hint');
@@ -257,4 +257,18 @@ renderer.setAnimationLoop(() => {
   for (const m of marks.children) if (m.userData.kind === 'target' || m.userData.kind === 'hint') m.material.opacity = m.userData.base * (0.75 + 0.25 * Math.sin(clock * 4));
   composer.render();
 });
-window.__play = { loadPuzzle, onSquare, state: () => ({ idx, step, solved, busy, fen: game.fen() }) };
+// The benchmark interface (bench/CONTRACT.md): lets a checker play the puzzles without a mouse.
+const until = f => new Promise(r => { const t = () => f() ? r() : setTimeout(t, 50); t(); });
+window.__play = {
+  count: PUZZLES.length,
+  async load(i) { await until(() => !busy); loadPuzzle(i); },
+  state: () => ({ index: idx, idx, step, solved, busy, fen: game.fen() }),
+  async move(from, to) {
+    await until(() => !busy);
+    const legal = !solved && game.moves({ verbose: true }).some(m => m.from === from && m.to === to);
+    if (!legal) return { legal: false, accepted: false, solved };
+    const accepted = await tryMove(from, to);
+    return { legal: true, accepted, solved };
+  },
+  loadPuzzle, onSquare,
+};

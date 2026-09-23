@@ -1,0 +1,8 @@
+{
+  "build": "npm run build",
+  "film": "film/index.html",
+  "play": "play/index.html",
+  "puzzles": "puzzles/selected.json",
+  "sound": "npm run sound",
+  "soundFile": "film/out/sound.wav"
+}

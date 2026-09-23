@@ -37,7 +37,14 @@
     }
    }
   },
-  "url": "https://lichess.org/training/SA3eo"
+  "url": "https://lichess.org/training/SA3eo",
+  "solution": [
+   "Rg6+",
+   "Kh5",
+   "Rh6+",
+   "Kg4",
+   "Rbg6#"
+  ]
  },
  {
   "id": "Tuzwy",
@@ -76,7 +83,14 @@
     }
    }
   },
-  "url": "https://lichess.org/training/Tuzwy"
+  "url": "https://lichess.org/training/Tuzwy",
+  "solution": [
+   "Ng5+",
+   "Kh8",
+   "Rb8+",
+   "Re8",
+   "Rxe8#"
+  ]
  },
  {
   "id": "ZPT5l",
@@ -116,6 +130,13 @@
     }
    }
   },
-  "url": "https://lichess.org/training/ZPT5l"
+  "url": "https://lichess.org/training/ZPT5l",
+  "solution": [
+   "Qd8+",
+   "Kg7",
+   "h6+",
+   "Kxh6",
+   "Qf8#"
+  ]
  }
 ]

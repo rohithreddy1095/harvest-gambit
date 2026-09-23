@@ -1152,7 +1152,7 @@ async function startWorld(status) {
 // ---------------------------------------------------------------- the film
 // The walk ends with the field replanting itself: both armies sink into the soil and
 // puzzle #1 grows up out of it, seen from behind the Livestock side.
-const PUZZLE = {"id":"SA3eo","rating":1242,"popularity":100,"plays":3159,"themes":["endgame","long","mate","mateIn3","rookEndgame"],"pieces":10,"setupFen":"8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41","setup":"Rf3","fen":"8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42","line":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"],"tree":{"Rg6+":{"reply":"Kh5","next":{"Rh6+":{"reply":"Kg4","next":{"Rbg6#":{"mate":true}}}}}},"url":"https://lichess.org/training/SA3eo"};
+const PUZZLE = {"id":"SA3eo","rating":1242,"popularity":100,"plays":3159,"themes":["endgame","long","mate","mateIn3","rookEndgame"],"pieces":10,"setupFen":"8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41","setup":"Rf3","fen":"8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42","line":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"],"tree":{"Rg6+":{"reply":"Kh5","next":{"Rh6+":{"reply":"Kg4","next":{"Rbg6#":{"mate":true}}}}}},"url":"https://lichess.org/training/SA3eo","solution":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"]};
 const START_FEN = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
 // Camera: [t, [x,y,z]] positions and look targets (a third element of 0 holds the spline still there).
@@ -1223,6 +1223,7 @@ if (RECORD) {
   update(0); composer.render(); probe('after first frame');
   window.__frame = async t => { update(t); composer.render(); await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); return true; };
   window.__stats = world.stats;
+  window.__duration = DURATION;
   window.__ready = true;
 } else {
   document.querySelector('#k-claude .line').innerHTML = 'Written by Claude in one conversation.<br>Rendered live, in your browser.';

@@ -1174,7 +1174,7 @@ async function startWorld(status) {
 import { Chess } from 'chess.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-const PUZZLES = [{"id":"SA3eo","rating":1242,"popularity":100,"plays":3159,"themes":["endgame","long","mate","mateIn3","rookEndgame"],"pieces":10,"setupFen":"8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41","setup":"Rf3","fen":"8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42","line":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"],"tree":{"Rg6+":{"reply":"Kh5","next":{"Rh6+":{"reply":"Kg4","next":{"Rbg6#":{"mate":true}}}}}},"url":"https://lichess.org/training/SA3eo"},{"id":"Tuzwy","rating":1296,"popularity":100,"plays":4246,"themes":["endgame","long","mate","mateIn3"],"pieces":9,"setupFen":"8/4r1p1/1R2N2k/p6n/8/r7/3K4/8 b - - 3 43","setup":"Kh7","fen":"8/4r1pk/1R2N3/p6n/8/r7/3K4/8 w - - 4 44","line":["Ng5+","Kh8","Rb8+","Re8","Rxe8#"],"tree":{"Ng5+":{"reply":"Kh8","next":{"Rb8+":{"reply":"Re8","next":{"Rxe8#":{"mate":true}}}}}},"url":"https://lichess.org/training/Tuzwy"},{"id":"ZPT5l","rating":1256,"popularity":100,"plays":3813,"themes":["attraction","endgame","long","mate","mateIn3"],"pieces":11,"setupFen":"2q3k1/5p1p/5rp1/7P/3Q1P1K/6P1/8/8 b - - 4 52","setup":"Qf5","fen":"6k1/5p1p/5rp1/5q1P/3Q1P1K/6P1/8/8 w - - 5 53","line":["Qd8+","Kg7","h6+","Kxh6","Qf8#"],"tree":{"Qd8+":{"reply":"Kg7","next":{"h6+":{"reply":"Kxh6","next":{"Qf8#":{"mate":true}}}}}},"url":"https://lichess.org/training/ZPT5l"}];
+const PUZZLES = [{"id":"SA3eo","rating":1242,"popularity":100,"plays":3159,"themes":["endgame","long","mate","mateIn3","rookEndgame"],"pieces":10,"setupFen":"8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41","setup":"Rf3","fen":"8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42","line":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"],"tree":{"Rg6+":{"reply":"Kh5","next":{"Rh6+":{"reply":"Kg4","next":{"Rbg6#":{"mate":true}}}}}},"url":"https://lichess.org/training/SA3eo","solution":["Rg6+","Kh5","Rh6+","Kg4","Rbg6#"]},{"id":"Tuzwy","rating":1296,"popularity":100,"plays":4246,"themes":["endgame","long","mate","mateIn3"],"pieces":9,"setupFen":"8/4r1p1/1R2N2k/p6n/8/r7/3K4/8 b - - 3 43","setup":"Kh7","fen":"8/4r1pk/1R2N3/p6n/8/r7/3K4/8 w - - 4 44","line":["Ng5+","Kh8","Rb8+","Re8","Rxe8#"],"tree":{"Ng5+":{"reply":"Kh8","next":{"Rb8+":{"reply":"Re8","next":{"Rxe8#":{"mate":true}}}}}},"url":"https://lichess.org/training/Tuzwy","solution":["Ng5+","Kh8","Rb8+","Re8","Rxe8#"]},{"id":"ZPT5l","rating":1256,"popularity":100,"plays":3813,"themes":["attraction","endgame","long","mate","mateIn3"],"pieces":11,"setupFen":"2q3k1/5p1p/5rp1/7P/3Q1P1K/6P1/8/8 b - - 4 52","setup":"Qf5","fen":"6k1/5p1p/5rp1/5q1P/3Q1P1K/6P1/8/8 w - - 5 53","line":["Qd8+","Kg7","h6+","Kxh6","Qf8#"],"tree":{"Qd8+":{"reply":"Kg7","next":{"h6+":{"reply":"Kxh6","next":{"Qf8#":{"mate":true}}}}}},"url":"https://lichess.org/training/ZPT5l","solution":["Qd8+","Kg7","h6+","Kxh6","Qf8#"]}];
 const $ = id => document.getElementById(id);
 const wait = s => new Promise(r => setTimeout(r, s * 1000));
 const ease = k => k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
@@ -1315,10 +1315,10 @@ async function tryMove(from, to) {
     tries[step]++;
     say(`After ${mv.san} the Crops slip away. Try another move.`, 'bad');
     await wait(1.0); game.undo(); await fieldUndo(info);
-    busy = false; return;
+    busy = false; return false;
   }
   clearMarks('last'); mark(geoSquare, GOLD, mv.from, 0.07, 'last'); mark(geoSquare, GOLD, mv.to, 0.11, 'last');
-  if (hit.mate) { played[step] = { w: mv.san }; await checkmate(); busy = false; return; }
+  if (hit.mate) { played[step] = { w: mv.san }; await checkmate(); busy = false; return true; }
   say(`${mv.san}. Good.`, 'good'); drawSteps();
   await wait(0.5);
   const reply = game.move(hit.reply);
@@ -1327,7 +1327,7 @@ async function tryMove(from, to) {
   node = hit.next; step++;
   clearMarks('last'); mark(geoSquare, GOLD, reply.from, 0.07, 'last'); mark(geoSquare, GOLD, reply.to, 0.11, 'last');
   say(`The Crops answer ${reply.san}. ${STEP_LEFT[step]}`);
-  drawSteps(); busy = false;
+  drawSteps(); busy = false; return true;
 }
 async function checkmate() {
   solved = true; drawSteps(); clearMarks('sel', 'target', 'hint');
@@ -1428,6 +1428,20 @@ renderer.setAnimationLoop(() => {
   for (const m of marks.children) if (m.userData.kind === 'target' || m.userData.kind === 'hint') m.material.opacity = m.userData.base * (0.75 + 0.25 * Math.sin(clock * 4));
   composer.render();
 });
-window.__play = { loadPuzzle, onSquare, state: () => ({ idx, step, solved, busy, fen: game.fen() }) };
+// The benchmark interface (bench/CONTRACT.md): lets a checker play the puzzles without a mouse.
+const until = f => new Promise(r => { const t = () => f() ? r() : setTimeout(t, 50); t(); });
+window.__play = {
+  count: PUZZLES.length,
+  async load(i) { await until(() => !busy); loadPuzzle(i); },
+  state: () => ({ index: idx, idx, step, solved, busy, fen: game.fen() }),
+  async move(from, to) {
+    await until(() => !busy);
+    const legal = !solved && game.moves({ verbose: true }).some(m => m.from === from && m.to === to);
+    if (!legal) return { legal: false, accepted: false, solved };
+    const accepted = await tryMove(from, to);
+    return { legal: true, accepted, solved };
+  },
+  loadPuzzle, onSquare,
+};
 
 </script>

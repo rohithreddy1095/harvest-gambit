@@ -6,3 +6,6 @@ dist/
 # Lichess candidates: regenerate with puzzles/fetch.sh
 puzzles/mate3-easy.csv
 puzzles/*.log
+
+# Benchmark runs and check results
+bench/runs/

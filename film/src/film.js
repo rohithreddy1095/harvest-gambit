@@ -73,6 +73,7 @@ if (RECORD) {
   update(0); composer.render(); probe('after first frame');
   window.__frame = async t => { update(t); composer.render(); await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))); return true; };
   window.__stats = world.stats;
+  window.__duration = DURATION;
   window.__ready = true;
 } else {
   document.querySelector('#k-claude .line').innerHTML = 'Written by Claude in one conversation.<br>Rendered live, in your browser.';
