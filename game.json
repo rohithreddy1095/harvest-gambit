@@ -1,0 +1,119 @@
+{
+  "title": "Harvest Gambit",
+  "preview": true,
+  "white": "rohith",
+  "black": "claude",
+  "cutoff": "20:00",
+  "tz": "Asia/Kolkata",
+  "startedAt": "2026-09-22T17:30:10.108Z",
+  "moves": [
+    {
+      "san": "e4",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:10.269Z"
+    },
+    {
+      "san": "e5",
+      "by": "claude",
+      "note": "Planting in the centre. If the Livestock want the middle of the field, they'll have to share it.",
+      "at": "2026-09-22T17:30:10.667Z"
+    },
+    {
+      "san": "Nf3",
+      "by": "rohith",
+      "suggestedBy": "@sample_reader1",
+      "at": "2026-09-22T17:30:11.014Z"
+    },
+    {
+      "san": "Nc6",
+      "by": "claude",
+      "at": "2026-09-22T17:30:11.169Z"
+    },
+    {
+      "san": "Bc4",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:11.362Z"
+    },
+    {
+      "san": "Nf6",
+      "by": "claude",
+      "note": "The Two Knights. Ng5 is coming, I suspect, and I'm willing to let the f7 seedling be threatened for a lead in development.",
+      "at": "2026-09-22T17:30:11.506Z"
+    },
+    {
+      "san": "Ng5",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:11.657Z"
+    },
+    {
+      "san": "d5",
+      "by": "claude",
+      "at": "2026-09-22T17:30:11.817Z"
+    },
+    {
+      "san": "exd5",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:11.963Z"
+    },
+    {
+      "san": "Na5",
+      "by": "claude",
+      "note": "Not recapturing. Taking on d5 walks into the Fried Liver, and nobody on this farm wants that. The horse goes to the edge to chase the Scarecrow instead.",
+      "at": "2026-09-22T17:30:12.119Z"
+    },
+    {
+      "san": "Bb5+",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:12.297Z"
+    },
+    {
+      "san": "c6",
+      "by": "claude",
+      "at": "2026-09-22T17:30:12.434Z"
+    },
+    {
+      "san": "dxc6",
+      "by": "rohith",
+      "at": "2026-09-22T17:30:12.609Z"
+    },
+    {
+      "san": "bxc6",
+      "by": "claude",
+      "note": "A seedling down, but two Livestock pieces are about to be kicked around the field. Time is the crop I'm growing.",
+      "at": "2026-09-22T17:30:12.787Z"
+    }
+  ],
+  "suggestions": [
+    {
+      "handle": "@sample_reader2",
+      "text": "Be2 retreat",
+      "san": "Be2",
+      "likes": 7,
+      "at": "2026-09-22T17:30:12.947Z"
+    },
+    {
+      "handle": "@sample_reader3",
+      "text": "Ba4",
+      "san": "Ba4",
+      "likes": 3,
+      "at": "2026-09-22T17:30:13.119Z"
+    },
+    {
+      "handle": "@sample_reader4",
+      "text": "queen f3 attack f7",
+      "san": "Qf3",
+      "reason": "nothing queen can go to f7",
+      "likes": 2,
+      "at": "2026-09-22T17:30:24.392Z"
+    },
+    {
+      "handle": "@sample_reader5",
+      "text": "sac the horse lol",
+      "san": null,
+      "reason": "no move found in reply",
+      "likes": 0,
+      "at": "2026-09-22T17:30:13.415Z"
+    }
+  ],
+  "result": null
+}

@@ -1,0 +1,440 @@
+<title>Harvest Gambit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Mono:wght@400;500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --ground: #edf0e3;
+  --surface: #f8f9f2;
+  --ink: #1e2a1b;
+  --muted: #5d6a55;
+  --rule: #d3d9c4;
+  --accent: #e0a019;          /* tractor yellow */
+  --accent-ink: #3a2a00;
+  --good: #3f7d3a;
+  --warn: #b0551f;
+  --live-fill: #f6f1e4;       /* Livestock: cream wool */
+  --live-line: #2b2218;
+  --crop-fill: #2f5b33;       /* Crops: deep leaf */
+  --crop-line: #0e1e10;
+  --crop-vein: #9fcf6a;
+    --shadow: 0 1px 0 rgba(30,42,27,.06), 0 18px 40px -18px rgba(30,42,27,.35);
+  --f-display: "Caprasimo", "Cooper Black", Georgia, serif;
+  --f-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #10150e; --surface: #182015; --ink: #e3ead4; --muted: #99a78c; --rule: #2c3727;
+    --accent: #f0b43a; --accent-ink: #2a1d00; --good: #7cc070; --warn: #f08a4b;
+    --shadow: 0 1px 0 rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #10150e; --surface: #182015; --ink: #e3ead4; --muted: #99a78c; --rule: #2c3727;
+  --accent: #f0b43a; --accent-ink: #2a1d00; --good: #7cc070; --warn: #f08a4b;
+  --shadow: 0 1px 0 rgba(0,0,0,.3), 0 18px 40px -18px rgba(0,0,0,.8);
+}
+
+/* Seasons repaint the field itself. */
+[data-season="spring"] { --sq-l: #dfe3a6; --sq-d: #6f5a3b; --stub: #a8b35c; --furrow: #57442b; }
+[data-season="summer"] { --sq-l: #ead38c; --sq-d: #7d5933; --stub: #c49b3d; --furrow: #5f4124; }
+[data-season="autumn"] { --sq-l: #e6bf86; --sq-d: #6b4127; --stub: #b97c3c; --furrow: #4f2d19; }
+[data-season="winter"] { --sq-l: #e3e8ea; --sq-d: #5d5b58; --stub: #b8c3c9; --furrow: #464442; }
+
+* { box-sizing: border-box; }
+body {
+  background: var(--ground); color: var(--ink);
+  font: 16px/1.55 var(--f-body);
+  padding-inline: 16px; padding-block: 28px 56px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 28px; }
+
+.preview-note {
+  font-size: 14px; color: var(--accent-ink); background: var(--accent);
+  padding: 8px 14px; border-radius: 6px; justify-self: start;
+}
+
+header.top { display: grid; gap: 6px; }
+.eyebrow { font: 500 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+h1 {
+  font: 400 clamp(44px, 8vw, 84px)/.92 var(--f-display); margin: 0; letter-spacing: -.01em;
+  text-wrap: balance;
+}
+.matchup { font-size: 17px; color: var(--muted); margin: 4px 0 0; }
+.matchup b { color: var(--ink); font-weight: 600; }
+.side-dot { display: inline-block; width: .8em; height: .8em; border-radius: 50%; vertical-align: -.05em; margin-right: .3em; border: 1.5px solid; }
+.side-dot.w { background: var(--live-fill); border-color: var(--live-line); }
+.side-dot.b { background: var(--crop-fill); border-color: var(--crop-line); }
+
+.main { display: grid; gap: 28px; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: start; }
+@media (max-width: 860px) { .main { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- Board ---- */
+.field { display: grid; gap: 12px; }
+.board-frame {
+  position: relative; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);
+  background: var(--sq-d); aspect-ratio: 1; max-width: 100%;
+}
+.board { display: block; width: 100%; height: auto; }
+.piece { transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.pc-w { fill: var(--live-fill); stroke: var(--live-line); }
+.pc-b { fill: var(--crop-fill); stroke: var(--crop-line); }
+.pc-w, .pc-b { stroke-width: 3.2; stroke-linejoin: round; }
+.em-w { fill: none; stroke: var(--live-line); stroke-width: 2; stroke-linecap: round; opacity: .55; }
+.em-b { fill: var(--crop-vein); stroke: none; }
+.coord { font: 600 15px var(--f-mono); }
+@media (prefers-reduced-motion: reduce) { .piece { transition: none; } }
+
+.scrub { display: flex; align-items: center; gap: 10px; }
+.scrub input[type=range] { flex: 1; accent-color: var(--accent); min-width: 0; }
+.btn {
+  font: 500 13px var(--f-mono); color: var(--ink); background: var(--surface);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 7px 10px; cursor: pointer;
+}
+.btn:hover { border-color: var(--muted); }
+.btn:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.ply-label { font: 500 13px var(--f-mono); color: var(--muted); min-width: 8.5em; text-align: right; font-variant-numeric: tabular-nums; }
+
+.captured { display: flex; justify-content: space-between; gap: 12px; min-height: 26px; }
+.captured .row { display: flex; flex-wrap: wrap; gap: 0; align-items: center; }
+.captured svg { width: 24px; height: 24px; margin-right: -6px; }
+
+/* ---- Rail ---- */
+.rail { display: grid; gap: 22px; }
+.round {
+  background: var(--surface); border-radius: 12px; padding: 22px; box-shadow: var(--shadow);
+  display: grid; gap: 16px;
+}
+.round-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.day { font: 400 34px/1 var(--f-display); margin: 0; }
+.season-chip {
+  font: 500 12px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+  padding: 6px 9px; border-radius: 999px; border: 1px solid var(--rule); color: var(--muted);
+}
+.turn-line { margin: 0; font-size: 17px; }
+.clock {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+  padding: 12px 14px; border-radius: 8px; background: var(--ground);
+}
+.clock .t { font: 500 26px/1 var(--f-mono); font-variant-numeric: tabular-nums; }
+.clock .l { font-size: 14px; color: var(--muted); }
+.how { margin: 0; font-size: 15px; color: var(--muted); }
+.how code { font: 500 14px var(--f-mono); color: var(--ink); background: var(--ground); padding: 1px 5px; border-radius: 4px; }
+
+h2 { font: 600 13px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.tally { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.tally li {
+  display: grid; grid-template-columns: 4.5em 1fr auto; gap: 12px; align-items: center;
+  padding: 10px 12px; border-radius: 8px; background: var(--surface); border: 1px solid var(--rule);
+}
+.tally li.lead { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.tally .san { font: 500 17px var(--f-mono); }
+.tally .who { font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+.tally .likes { font: 500 14px var(--f-mono); font-variant-numeric: tabular-nums; }
+.empty { font-size: 15px; color: var(--muted); margin: 0; }
+.unread { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+.legend { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px 16px; margin: 0; }
+.legend div { display: grid; grid-template-columns: auto auto 1fr; align-items: center; column-gap: 4px; font-size: 14px; line-height: 1.25; }
+.legend svg { width: 30px; height: 30px; grid-row: span 2; }
+.legend dt { font-weight: 600; padding-left: 6px; }
+.legend dd { margin: 0; color: var(--muted); padding-left: 6px; grid-column: 3; font-size: 13px; }
+
+/* ---- Log ---- */
+.log-sec { display: grid; gap: 12px; }
+.log { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.log li { display: grid; grid-template-columns: 3em 1fr 1fr; gap: 10px; align-items: start; padding: 8px 10px; border-radius: 6px; }
+.log li:nth-child(odd) { background: var(--surface); }
+.log .n { font: 500 14px var(--f-mono); color: var(--muted); padding-top: 3px; }
+.mv { display: grid; gap: 4px; }
+.mv button { all: unset; cursor: pointer; font: 500 16px var(--f-mono); justify-self: start; border-radius: 4px; padding: 0 3px; }
+.mv button:focus-visible { outline: 2px solid var(--accent); }
+.mv button[aria-current="true"] { background: var(--accent); color: var(--accent-ink); }
+.by { font-size: 13px; color: var(--muted); }
+.by .crowd { color: var(--good); font-weight: 600; }
+.note {
+  grid-column: 2 / -1; margin: 4px 0 6px; padding: 12px 14px; border-radius: 8px;
+  background: var(--ground); border: 1px solid var(--rule); font-size: 15px;
+}
+.note .sig { display: block; font: 500 12px var(--f-mono); letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; }
+@media (max-width: 520px) {
+  .log li { grid-template-columns: 2.2em 1fr 1fr; gap: 6px; }
+  .note { grid-column: 1 / -1; }
+}
+
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Staunton silhouettes, drawn for this board. Farm names live in the legend. -->
+    <symbol id="p" viewBox="0 0 100 100"><circle cx="50" cy="30" r="12"/><rect x="37" y="42" width="26" height="7" rx="3.5"/><path d="M42 49C42 62 36 71 30 80H70C64 71 58 62 58 49Z"/><rect x="24" y="79" width="52" height="10" rx="4"/></symbol>
+    <symbol id="r" viewBox="0 0 100 100"><path d="M30 20H39V27H45V20H55V27H61V20H70V39Q70 44 65 44H35Q30 44 30 39Z"/><path d="M36 44L33 80H67L64 44Z"/><rect x="22" y="79" width="56" height="10" rx="4"/></symbol>
+    <symbol id="n" viewBox="0 0 100 100"><path d="M30 80H72C72 64 70 52 66 43C62 29 57 19 46 15L44 7L38 17L33 13L32 24C26 30 20 41 18 51C17 57 22 61 27 58L35 53C39 51 43 51 47 46C48 58 39 66 31 73Z"/><rect x="22" y="79" width="56" height="10" rx="4"/></symbol>
+    <symbol id="b" viewBox="0 0 100 100"><circle cx="50" cy="11" r="4.5"/><path d="M50 16C62 25 66 36 62 45C59 51 41 51 38 45C34 36 38 25 50 16Z"/><rect x="36" y="48" width="28" height="7" rx="3.5"/><path d="M42 55C42 66 37 73 32 80H68C63 73 58 66 58 55Z"/><rect x="24" y="79" width="52" height="10" rx="4"/></symbol>
+    <symbol id="q" viewBox="0 0 100 100"><path d="M31 60L24 29L36 47L38 22L46 45L50 17L54 45L62 22L64 47L76 29L69 60Z"/><circle cx="24" cy="26" r="4"/><circle cx="38" cy="19" r="4"/><circle cx="50" cy="14" r="4"/><circle cx="62" cy="19" r="4"/><circle cx="76" cy="26" r="4"/><rect x="30" y="58" width="40" height="7" rx="3.5"/><path d="M37 65C37 71 33 76 28 80H72C67 76 63 71 63 65Z"/><rect x="22" y="79" width="56" height="10" rx="4"/></symbol>
+    <symbol id="k" viewBox="0 0 100 100"><path d="M47 5H53V13H60V19H53V29H47V19H40V13H47Z"/><path d="M29 38C29 27 40 25 50 31C60 25 71 27 71 38C71 47 63 52 61 58H39C37 52 29 47 29 38Z"/><rect x="35" y="57" width="30" height="7" rx="3.5"/><path d="M40 64C40 71 35 76 30 80H70C65 76 60 71 60 64Z"/><rect x="22" y="79" width="56" height="10" rx="4"/></symbol>
+    <!-- Emblems: wool curls for Livestock, a leaf for Crops -->
+    <symbol id="em-w" viewBox="0 0 100 100"><path d="M41 71a3.5 3.5 0 1 1 6 0M47 71a3.5 3.5 0 1 1 6 0M53 71a3.5 3.5 0 1 1 6 0"/></symbol>
+    <symbol id="em-b" viewBox="0 0 100 100"><path d="M50 63C57 64 59 70 50 77C41 70 43 64 50 63Z"/></symbol>
+    <symbol id="eye" viewBox="0 0 100 100"><circle cx="35" cy="31" r="2.8"/></symbol>
+
+    <radialGradient id="check"><stop offset="0" stop-color="#e2452b" stop-opacity=".85"/><stop offset="1" stop-color="#e2452b" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <p class="preview-note" id="previewNote" hidden>Sample game. The real match starts soon; these moves and replies are placeholders.</p>
+
+  <header class="top">
+    <span class="eyebrow">A chess match on a farm · one move a day</span>
+    <h1>Harvest Gambit</h1>
+    <p class="matchup"><span class="side-dot w"></span><b>Livestock</b>: Rohith &amp; whoever replies &nbsp;vs&nbsp; <span class="side-dot b"></span><b>Crops</b>: Claude</p>
+  </header>
+
+  <div class="main">
+    <section class="field" aria-label="Board">
+      <div class="captured"><div class="row" id="capByCrops" aria-label="Livestock pieces taken"></div><div class="row" id="capByLive" aria-label="Crops pieces taken"></div></div>
+      <div class="board-frame"><svg class="board" id="board" viewBox="0 0 800 800" role="img" aria-label="Chess board"></svg></div>
+      <div class="scrub">
+        <button class="btn" id="prev" aria-label="Previous move">◀</button>
+        <input type="range" id="ply" min="0" value="0" aria-label="Move in the game">
+        <button class="btn" id="next" aria-label="Next move">▶</button>
+        <span class="ply-label" id="plyLabel"></span>
+      </div>
+    </section>
+
+    <aside class="rail">
+      <section class="round" aria-label="Today's round">
+        <div class="round-head">
+          <p class="day" id="day"></p>
+          <span class="season-chip" id="season"></span>
+        </div>
+        <p class="turn-line" id="turnLine"></p>
+        <div class="clock" id="clock"><span class="t" id="clockT"></span><span class="l" id="clockL"></span></div>
+        <p class="how" id="how">Reply to today's post with a move: <code>Nf3</code>, <code>e4</code> and <code>knight to f3</code> all count. The most-liked legal reply before the cutoff is played for Livestock. If nobody replies, Rohith moves.</p>
+      </section>
+
+      <section aria-labelledby="tallyH">
+        <h2 id="tallyH">Replies this round</h2>
+        <ol class="tally" id="tally"></ol>
+        <p class="unread" id="unread" hidden></p>
+      </section>
+
+      <section aria-labelledby="legendH">
+        <h2 id="legendH">Who's who on the farm</h2>
+        <dl class="legend" id="legend"></dl>
+      </section>
+    </aside>
+  </div>
+
+  <section class="log-sec" aria-labelledby="logH">
+    <h2 id="logH">The season so far</h2>
+    <ol class="log" id="log"></ol>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const GAME = /*__GAME__*/null;
+const $ = id => document.getElementById(id);
+const FILES = 'abcdefgh';
+const SEASON_NOTE = { spring: 'Spring · planting', summer: 'Summer · growing', autumn: 'Autumn · harvest', winter: 'Winter · frost' };
+const NAMES = { k: 'Farmer', q: 'Matriarch', r: 'Silo', b: 'Scarecrow', n: 'Plough horse', p: ['Lamb', 'Seedling'] };
+const CHESS = { k: 'King', q: 'Queen', r: 'Rook', b: 'Bishop', n: 'Knight', p: 'Pawn' };
+const VAL = { p: 1, n: 3, b: 3, r: 5, q: 9, k: 0 };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+function parseFen(fen) {
+  const board = {};
+  fen.split(' ')[0].split('/').forEach((row, r) => {
+    let f = 0;
+    for (const ch of row) {
+      if (/\d/.test(ch)) { f += +ch; continue; }
+      board[FILES[f] + (8 - r)] = { t: ch.toLowerCase(), c: ch === ch.toUpperCase() ? 'w' : 'b' };
+      f++;
+    }
+  });
+  return board;
+}
+const FIELD_DEFS = `<defs>
+  <pattern id="stubble" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+    <path d="M2 3l2 5M9 1l1.5 5M6 9l2 4M12 8l1 4" style="stroke:var(--stub)" stroke-width="1.1" stroke-linecap="round" opacity=".6" fill="none"/>
+  </pattern>
+  <pattern id="furrow" width="100" height="12.5" patternUnits="userSpaceOnUse">
+    <path d="M0 6.25Q25 4.5 50 6.25T100 6.25" style="stroke:var(--furrow)" stroke-width="2.2" fill="none" opacity=".55"/>
+  </pattern></defs>`;
+const xy = sq => [FILES.indexOf(sq[0]) * 100, (8 - +sq[1]) * 100];
+
+function pieceSVG(t, c, attrs = '') {
+  return `<g ${attrs}><use href="#${t}" class="pc-${c}" width="100" height="100"/>` +
+    (t === 'n' ? `<use href="#eye" width="100" height="100" style="fill:var(--${c === 'w' ? 'live-line' : 'crop-vein'})"/>` : '') +
+    `<use href="#em-${c}" class="em-${c}" width="100" height="100"/></g>`;
+}
+
+// A few wildflowers take root wherever something was captured.
+function flowers(sq) {
+  const [x, y] = xy(sq);
+  const seed = sq.charCodeAt(0) * 7 + +sq[1] * 13;
+  const cols = ['#f4d23c', '#c9a3e8', '#ffffff', '#f29bb0'];
+  const spots = [[16, 18], [84, 22], [20, 84], [84, 82], [50, 12]];
+  let s = '';
+  for (let i = 0; i < 3; i++) {
+    const [dx, dy] = spots[(seed + i * 2) % spots.length];
+    const col = cols[(seed + i) % cols.length];
+    s += `<g transform="translate(${x + dx} ${y + dy})">` +
+      [0, 72, 144, 216, 288].map(a => `<circle r="4.6" cx="${Math.cos(a * Math.PI / 180) * 5.6}" cy="${Math.sin(a * Math.PI / 180) * 5.6}" fill="${col}" stroke="rgba(0,0,0,.25)" stroke-width=".6"/>`).join('') +
+      `<circle r="3.2" fill="#e39a1d"/></g>`;
+  }
+  return s;
+}
+
+function render(i, animate) {
+  const ply = GAME.plies[i];
+  const board = parseFen(ply.fen);
+  const fullmove = +ply.fen.split(' ')[5];
+  const season = GAME.plies.length - 1 === i ? GAME.season : seasonOf(fullmove);
+  const svg = $('board');
+  svg.closest('.board-frame').dataset.season = season;
+
+  let s = FIELD_DEFS;
+  for (let r = 0; r < 8; r++) for (let f = 0; f < 8; f++) {
+    const light = (r + f) % 2 === 0;
+    s += `<rect x="${f * 100}" y="${r * 100}" width="100" height="100" style="fill:var(--sq-${light ? 'l' : 'd'})"/>` +
+      `<rect x="${f * 100}" y="${r * 100}" width="100" height="100" fill="url(#${light ? 'stubble' : 'furrow'})"/>`;
+  }
+  // captures so far leave flowers
+  const captured = new Set();
+  for (let j = 1; j <= i; j++) { const m = GAME.plies[j].move; if (m.captured) captured.add(m.to); }
+  captured.forEach(sq => s += flowers(sq));
+
+  const mv = ply.move;
+  if (mv) for (const sq of [mv.from, mv.to]) { const [x, y] = xy(sq); s += `<rect x="${x}" y="${y}" width="100" height="100" style="fill:var(--accent)" opacity=".38"/>`; }
+  const turn = ply.fen.split(' ')[1];
+  const inCheck = mv && /[+#]$/.test(mv.san);
+  if (inCheck) {
+    const k = Object.entries(board).find(([, p]) => p.t === 'k' && p.c === turn);
+    if (k) { const [x, y] = xy(k[0]); s += `<circle cx="${x + 50}" cy="${y + 52}" r="52" fill="url(#check)"/>`; }
+  }
+  const on = light => `style="fill:var(--sq-${light ? 'd' : 'l'})"`;
+  for (let f = 0; f < 8; f++) s += `<text class="coord" x="${f * 100 + 93}" y="792" text-anchor="end" ${on(f % 2 === 1)}>${FILES[f]}</text>`;
+  for (let r = 0; r < 8; r++) s += `<text class="coord" x="6" y="${r * 100 + 19}" ${on(r % 2 === 0)}>${8 - r}</text>`;
+
+  let moving = '';
+  for (const [sq, p] of Object.entries(board)) {
+    const [x, y] = xy(sq);
+    const g = pieceSVG(p.t, p.c, `class="piece" data-sq="${sq}" style="transform:translate(${x}px,${y}px)"`);
+    if (mv && sq === mv.to) moving = g; else s += g;
+  }
+  svg.innerHTML = s + moving;   // the moved piece draws last, on top
+
+  if (animate && mv) {
+    const el = svg.querySelector(`[data-sq="${mv.to}"]`);
+    const [fx, fy] = xy(mv.from), [tx, ty] = xy(mv.to);
+    el.style.transition = 'none';
+    el.style.transform = `translate(${fx}px,${fy}px)`;
+    el.getBoundingClientRect();
+    el.style.transition = '';
+    el.style.transform = `translate(${tx}px,${ty}px)`;
+  }
+
+  svg.setAttribute('aria-label', `Board after ${mv ? mv.san : 'the start'}`);
+  $('ply').value = i;
+  $('plyLabel').textContent = i === 0 ? 'Start' : `${Math.ceil(i / 2)}${i % 2 ? '.' : '…'} ${mv.san}`;
+  document.querySelectorAll('.mv button').forEach(b => b.setAttribute('aria-current', String(+b.dataset.ply === i)));
+  renderCaptured(i);
+}
+
+function seasonOf(n) { return n <= 8 ? 'spring' : n <= 18 ? 'summer' : n <= 30 ? 'autumn' : 'winter'; }
+
+function renderCaptured(i) {
+  const lost = { w: [], b: [] };
+  for (let j = 1; j <= i; j++) { const m = GAME.plies[j].move; if (m.captured) lost[m.color === 'w' ? 'b' : 'w'].push(m.captured); }
+  const row = (c, arr) => arr.sort((a, b) => VAL[b] - VAL[a]).map(t => `<svg viewBox="0 0 100 100" aria-label="${CHESS[t]}">${pieceSVG(t, c)}</svg>`).join('');
+  const diff = lost.b.reduce((a, t) => a + VAL[t], 0) - lost.w.reduce((a, t) => a + VAL[t], 0);
+  $('capByLive').innerHTML = row('b', lost.b) + (diff > 0 ? `<span class="ply-label" style="min-width:0;margin-left:10px">+${diff}</span>` : '');
+  $('capByCrops').innerHTML = row('w', lost.w) + (diff < 0 ? `<span class="ply-label" style="min-width:0;margin-left:10px">+${-diff}</span>` : '');
+}
+
+function whoLabel(m) {
+  if (m.suggestedBy) return `<span class="crowd">${esc(m.suggestedBy)}</span> from the replies`;
+  if (m.by === 'claude') return 'Claude';
+  if (m.by === 'rohith') return 'Rohith';
+  return esc(m.by);
+}
+
+function renderLog() {
+  const P = GAME.plies;
+  let html = '';
+  for (let i = 1; i < P.length; i += 2) {
+    const w = P[i].move, b = P[i + 1] && P[i + 1].move;
+    const cell = (m, ply) => m ? `<div class="mv"><button data-ply="${ply}">${esc(m.san)}</button><span class="by">${whoLabel(m)}</span></div>` : '<div></div>';
+    html += `<li><span class="n">${(i + 1) / 2}.</span>${cell(w, i)}${cell(b, i + 1)}` +
+      [w, b].filter(m => m && m.note).map(m => `<p class="note"><span class="sig">${m.by === 'claude' ? 'Claude, on ' : 'On '}${esc(m.san)}</span>${esc(m.note)}</p>`).join('') +
+      `</li>`;
+  }
+  $('log').innerHTML = html || '<li><span class="n"></span><p class="empty" style="grid-column:2/-1">No moves yet. The first seed goes in on day one.</p></li>';
+  $('log').addEventListener('click', e => { const b = e.target.closest('button[data-ply]'); if (b) go(+b.dataset.ply, true); });
+}
+
+function renderRound() {
+  $('day').textContent = GAME.result ? 'Harvest in' : `Day ${GAME.day}`;
+  $('season').textContent = SEASON_NOTE[GAME.season];
+  const side = GAME.turn === 'w' ? '<span class="side-dot w"></span><b>Livestock</b> to move' : '<span class="side-dot b"></span><b>Crops</b> to move. Claude is thinking.';
+  $('turnLine').innerHTML = GAME.result ? `Final result: <b>${GAME.result}</b>` : side + (GAME.inCheck ? ' <b>Check.</b>' : '');
+
+  const t = GAME.tally;
+  $('tally').innerHTML = t.length
+    ? t.map((r, i) => `<li class="${i === 0 ? 'lead' : ''}"><span class="san">${esc(r.san)}</span><span class="who">${r.voters.map(esc).join(', ')}</span><span class="likes">♥ ${r.likes}</span></li>`).join('')
+    : '<li><span class="empty" style="grid-column:1/-1">No moves suggested yet. One reply is enough to decide this one.</span></li>';
+  const bad = GAME.suggestions.filter(s => !s.san);
+  if (bad.length) { $('unread').hidden = false; $('unread').textContent = `${bad.length} ${bad.length === 1 ? 'reply' : 'replies'} couldn't be read as a legal move.`; }
+  if (GAME.result) $('clock').hidden = $('how').hidden = true;
+}
+
+function tick() {
+  const ms = new Date(GAME.cutoff) - Date.now();
+  if (GAME.turn !== 'w' || GAME.result) { $('clock').hidden = true; return; }
+  if (ms <= 0) { $('clockT').textContent = 'Closed'; $('clockL').textContent = "Today's move is on its way"; return; }
+  const h = Math.floor(ms / 3.6e6), m = Math.floor(ms / 6e4) % 60;
+  $('clockT').textContent = `${h}h ${String(m).padStart(2, '0')}m`;
+  $('clockL').textContent = `until replies close at ${GAME.cutoffLabel}`;
+}
+
+function renderLegend() {
+  $('legend').innerHTML = ['k', 'q', 'r', 'b', 'n', 'p'].map(t => {
+    const name = Array.isArray(NAMES[t]) ? `${NAMES[t][0]} / ${NAMES[t][1]}` : NAMES[t];
+    return `<div><svg viewBox="0 0 100 100" aria-hidden="true">${pieceSVG(t, 'w')}</svg><svg viewBox="0 0 100 100" aria-hidden="true">${pieceSVG(t, 'b')}</svg><dt>${name}</dt><dd>${CHESS[t]}</dd></div>`;
+  }).join('');
+}
+
+let cur = 0;
+function go(i, animate) {
+  i = Math.max(0, Math.min(GAME.plies.length - 1, i));
+  render(i, animate && i === cur + 1);
+  cur = i;
+}
+
+function start() {
+  $('previewNote').hidden = !GAME.preview;
+  $('ply').max = GAME.plies.length - 1;
+  renderLog(); renderRound(); renderLegend();
+  go(GAME.plies.length - 1, false);
+  tick(); setInterval(tick, 30000);
+  $('ply').addEventListener('input', e => go(+e.target.value, false));
+  $('prev').addEventListener('click', () => go(cur - 1, false));
+  $('next').addEventListener('click', () => go(cur + 1, true));
+  document.addEventListener('keydown', e => {
+    if (e.target.matches('input, textarea')) return;
+    if (e.key === 'ArrowLeft') go(cur - 1, false);
+    if (e.key === 'ArrowRight') go(cur + 1, true);
+  });
+  const built = new Date(GAME.builtAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' });
+  $('foot').textContent = `Updated ${built} IST · ${Math.max(0, GAME.plies.length - 1)} moves played · Board and pieces drawn for this match.`;
+}
+start();
+</script>

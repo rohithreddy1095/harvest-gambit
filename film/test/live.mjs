@@ -1,0 +1,17 @@
+import puppeteer from 'puppeteer-core';
+import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path';
+const ROOT = path.resolve('.');
+const srv = http.createServer((q, s) => { const f = path.join(ROOT, decodeURIComponent(new URL(q.url, 'http://x').pathname)); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { s.writeHead(404).end(); return; } s.writeHead(200, { 'content-type': f.endsWith('.html') ? 'text/html; charset=utf-8' : 'application/octet-stream' }); fs.createReadStream(f).pipe(s); }).listen(0);
+const b = await puppeteer.launch({ executablePath: process.env.CHROME_PATH || '/usr/bin/chromium', headless: 'new', protocolTimeout: 600000, args: ['--use-angle=gl', '--enable-gpu', '--ignore-gpu-blocklist', '--autoplay-policy=no-user-gesture-required'] });
+const p = await b.newPage(); await p.setViewport({ width: 1280, height: 720 });
+p.on('console', m => { if (['error', 'warn'].includes(m.type())) console.log('[page]', m.text().slice(0, 200)); });
+p.on('pageerror', e => console.log('[pageerror]', e.message));
+await p.goto(`http://localhost:${srv.address().port}/film/index.html`);
+await p.waitForSelector('#start:not([hidden])', { timeout: 600000 });
+console.log('status:', await p.$eval('#status', e => e.textContent));
+await p.screenshot({ path: process.argv[2] + '/live-0.png' });
+await p.click('#start');
+await new Promise(r => setTimeout(r, 12000));
+console.log('time:', await p.$eval('#tc', e => e.textContent), 'caption:', await p.$eval('#k-claude .line', e => e.textContent));
+await p.screenshot({ path: process.argv[2] + '/live-1.png' });
+await b.close(); srv.close();

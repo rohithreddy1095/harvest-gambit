@@ -1,0 +1,8 @@
+node_modules/
+# Rendered video, audio and stills: regenerate with film/make-film.sh and film/sound.mjs
+film/out/
+# Build output of the original 2D game page (./hg.js build)
+dist/
+# Lichess candidates: regenerate with puzzles/fetch.sh
+puzzles/mate3-easy.csv
+puzzles/*.log

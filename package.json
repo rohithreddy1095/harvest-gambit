@@ -1,0 +1,27 @@
+{
+  "name": "harvest-gambit",
+  "version": "1.0.0",
+  "description": "A life-size chessboard in a wheat field, built entirely from code: a procedural three.js farm, a film rendered frame by frame, and mate-in-3 puzzles you can play on the field.",
+  "scripts": {
+    "build": "node film/build.mjs",
+    "test": "node test.js",
+    "stills": "node film/render.mjs --stills 3,17,36,45,51,62 --w 960 --h 540",
+    "film": "./film/make-film.sh",
+    "sound": "node film/sound.mjs"
+  },
+  "keywords": [
+    "three.js",
+    "procedural",
+    "chess",
+    "webgl",
+    "generative"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "chess.js": "^1.4.0",
+    "puppeteer-core": "^23.11.1",
+    "three": "^0.169.0"
+  }
+}

@@ -1,0 +1,3813 @@
+[
+ {
+  "id": "0Y9P3",
+  "rating": 1426,
+  "popularity": 100,
+  "plays": 4720,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 8,
+  "setupFen": "7k/4R3/3p4/5Kp1/4P2p/6r1/8/8 b - - 1 42",
+  "setup": "h3",
+  "fen": "7k/4R3/3p4/5Kp1/4P3/6rp/8/8 w - - 0 43",
+  "line": [
+   "Kg6",
+   "Rf3",
+   "Re8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rf3",
+    "next": {
+     "Re8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/0Y9P3"
+ },
+ {
+  "id": "Tuzwy",
+  "rating": 1296,
+  "popularity": 100,
+  "plays": 4246,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 9,
+  "setupFen": "8/4r1p1/1R2N2k/p6n/8/r7/3K4/8 b - - 3 43",
+  "setup": "Kh7",
+  "fen": "8/4r1pk/1R2N3/p6n/8/r7/3K4/8 w - - 4 44",
+  "line": [
+   "Ng5+",
+   "Kh8",
+   "Rb8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Ng5+": {
+    "reply": "Kh8",
+    "next": {
+     "Rb8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/Tuzwy"
+ },
+ {
+  "id": "9PWGI",
+  "rating": 1305,
+  "popularity": 100,
+  "plays": 4194,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 12,
+  "setupFen": "8/6R1/1r3p1k/4p3/3p4/2rP2RP/6PK/1q6 b - - 5 48",
+  "setup": "Rxd3",
+  "fen": "8/6R1/1r3p1k/4p3/3p4/3r2RP/6PK/1q6 w - - 0 49",
+  "line": [
+   "R3g6+",
+   "Kh5",
+   "g4+",
+   "Kh4",
+   "Rh6#"
+  ],
+  "tree": {
+   "R3g6+": {
+    "reply": "Kh5",
+    "next": {
+     "g4+": {
+      "reply": "Kh4",
+      "next": {
+       "Rh7#": {
+        "mate": true
+       },
+       "Rh6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/9PWGI"
+ },
+ {
+  "id": "tJWHT",
+  "rating": 1449,
+  "popularity": 100,
+  "plays": 3983,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 8,
+  "setupFen": "8/5p1k/R4P2/7K/7P/8/p7/r7 b - - 0 41",
+  "setup": "Kg8",
+  "fen": "6k1/5p2/R4P2/7K/7P/8/p7/r7 w - - 1 42",
+  "line": [
+   "Kh6",
+   "Rb1",
+   "Ra8+",
+   "Rb8",
+   "Rxb8#"
+  ],
+  "tree": {
+   "Kh6": {
+    "reply": "Rb1",
+    "next": {
+     "Ra8+": {
+      "reply": "Rb8",
+      "next": {
+       "Rxb8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/tJWHT"
+ },
+ {
+  "id": "FFf24",
+  "rating": 1355,
+  "popularity": 100,
+  "plays": 3910,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 12,
+  "setupFen": "4r1k1/6pR/2pK2p1/p2p2P1/2r5/8/8/7R b - - 0 35",
+  "setup": "Kf8",
+  "fen": "4rk2/6pR/2pK2p1/p2p2P1/2r5/8/8/7R w - - 1 36",
+  "line": [
+   "Rh8+",
+   "Kf7",
+   "Rf1+",
+   "Rf4",
+   "Rxf4#"
+  ],
+  "tree": {
+   "Rh8+": {
+    "reply": "Kf7",
+    "next": {
+     "Rf1+": {
+      "reply": "Rf4",
+      "next": {
+       "Rxf4#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/FFf24"
+ },
+ {
+  "id": "ZPT5l",
+  "rating": 1256,
+  "popularity": 100,
+  "plays": 3813,
+  "themes": [
+   "attraction",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "2q3k1/5p1p/5rp1/7P/3Q1P1K/6P1/8/8 b - - 4 52",
+  "setup": "Qf5",
+  "fen": "6k1/5p1p/5rp1/5q1P/3Q1P1K/6P1/8/8 w - - 5 53",
+  "line": [
+   "Qd8+",
+   "Kg7",
+   "h6+",
+   "Kxh6",
+   "Qf8#"
+  ],
+  "tree": {
+   "Qd8+": {
+    "reply": "Kg7",
+    "next": {
+     "h6+": {
+      "reply": "Kxh6",
+      "next": {
+       "Qf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ZPT5l"
+ },
+ {
+  "id": "3FtEG",
+  "rating": 1447,
+  "popularity": 100,
+  "plays": 3548,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 12,
+  "setupFen": "7k/R7/1p3K2/2p4p/2P3pP/P1P3P1/6r1/8 b - - 0 38",
+  "setup": "Rxg3",
+  "fen": "7k/R7/1p3K2/2p4p/2P3pP/P1P3r1/8/8 w - - 0 39",
+  "line": [
+   "Kg6",
+   "Rf3",
+   "Ra8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rf3",
+    "next": {
+     "Ra8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/3FtEG"
+ },
+ {
+  "id": "qNkCd",
+  "rating": 1046,
+  "popularity": 100,
+  "plays": 3428,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "7k/8/1p3KR1/pBb2p1p/P4PrP/8/8/8 b - - 0 44",
+  "setup": "Rxh4",
+  "fen": "7k/8/1p3KR1/pBb2p1p/P4P1r/8/8/8 w - - 0 45",
+  "line": [
+   "Rh6+",
+   "Kg8",
+   "Bc4+",
+   "Kf8",
+   "Rh8#"
+  ],
+  "tree": {
+   "Rh6+": {
+    "reply": "Kg8",
+    "next": {
+     "Bc4+": {
+      "reply": "Kf8",
+      "next": {
+       "Rh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/qNkCd"
+ },
+ {
+  "id": "K4pWF",
+  "rating": 1450,
+  "popularity": 100,
+  "plays": 3426,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "5rk1/5p1p/3r2pP/4q3/8/1Q6/PpP5/1K3R2 b - - 3 31",
+  "setup": "Rfd8",
+  "fen": "3r2k1/5p1p/3r2pP/4q3/8/1Q6/PpP5/1K3R2 w - - 4 32",
+  "line": [
+   "Qxf7+",
+   "Kh8",
+   "Qf8+",
+   "Rxf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Qxf7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qf8+": {
+      "reply": "Rxf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/K4pWF"
+ },
+ {
+  "id": "MFBvc",
+  "rating": 1199,
+  "popularity": 100,
+  "plays": 3310,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "6k1/5pp1/6p1/1r3n2/2R1NK2/5P1P/8/8 b - - 1 46",
+  "setup": "Ra5",
+  "fen": "6k1/5pp1/6p1/r4n2/2R1NK2/5P1P/8/8 w - - 2 47",
+  "line": [
+   "Rc8+",
+   "Kh7",
+   "Ng5+",
+   "Kh6",
+   "Rh8#"
+  ],
+  "tree": {
+   "Rc8+": {
+    "reply": "Kh7",
+    "next": {
+     "Ng5+": {
+      "reply": "Kh6",
+      "next": {
+       "Rh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/MFBvc"
+ },
+ {
+  "id": "SxJk3",
+  "rating": 1168,
+  "popularity": 100,
+  "plays": 3211,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "5r1k/p4q1p/1n5P/1p4Q1/1P1R1P2/2K5/2P5/8 b - - 3 42",
+  "setup": "Qf6",
+  "fen": "5r1k/p6p/1n3q1P/1p4Q1/1P1R1P2/2K5/2P5/8 w - - 4 43",
+  "line": [
+   "Qxf6+",
+   "Rxf6",
+   "Rd8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Qxf6+": {
+    "reply": "Rxf6",
+    "next": {
+     "Rd8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/SxJk3"
+ },
+ {
+  "id": "SA3eo",
+  "rating": 1242,
+  "popularity": 100,
+  "plays": 3159,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41",
+  "setup": "Rf3",
+  "fen": "8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42",
+  "line": [
+   "Rg6+",
+   "Kh5",
+   "Rh6+",
+   "Kg4",
+   "Rbg6#"
+  ],
+  "tree": {
+   "Rg6+": {
+    "reply": "Kh5",
+    "next": {
+     "Rh6+": {
+      "reply": "Kg4",
+      "next": {
+       "Rbg6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/SA3eo"
+ },
+ {
+  "id": "Qj2rE",
+  "rating": 1447,
+  "popularity": 100,
+  "plays": 3152,
+  "themes": [
+   "attraction",
+   "clearance",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "operaMate",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "4Rbk1/p4ppp/8/1B6/2p3q1/2K1B3/1P6/4R3 b - - 1 32",
+  "setup": "Qf5",
+  "fen": "4Rbk1/p4ppp/8/1B3q2/2p5/2K1B3/1P6/4R3 w - - 2 33",
+  "line": [
+   "Rxf8+",
+   "Kxf8",
+   "Bc5+",
+   "Qxc5",
+   "Re8#"
+  ],
+  "tree": {
+   "Rxf8+": {
+    "reply": "Kxf8",
+    "next": {
+     "Bc5+": {
+      "reply": "Qxc5",
+      "next": {
+       "Re8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/Qj2rE"
+ },
+ {
+  "id": "LWHhf",
+  "rating": 1268,
+  "popularity": 100,
+  "plays": 2976,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "8/7R/3k2p1/1N2n2p/PKp1P3/8/6r1/8 b - - 2 50",
+  "setup": "Kc6",
+  "fen": "8/7R/2k3p1/1N2n2p/PKp1P3/8/6r1/8 w - - 3 51",
+  "line": [
+   "Rc7+",
+   "Kb6",
+   "a5+",
+   "Ka6",
+   "Ra7#"
+  ],
+  "tree": {
+   "Rc7+": {
+    "reply": "Kb6",
+    "next": {
+     "a5+": {
+      "reply": "Ka6",
+      "next": {
+       "Ra7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/LWHhf"
+ },
+ {
+  "id": "uCY7F",
+  "rating": 1431,
+  "popularity": 100,
+  "plays": 2808,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 6,
+  "setupFen": "7k/6p1/1R6/5Kp1/8/7r/8/8 b - - 1 43",
+  "setup": "Rg3",
+  "fen": "7k/6p1/1R6/5Kp1/8/6r1/8/8 w - - 2 44",
+  "line": [
+   "Kg6",
+   "Rf3",
+   "Rb8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rf3",
+    "next": {
+     "Rb8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/uCY7F"
+ },
+ {
+  "id": "rg0UF",
+  "rating": 1406,
+  "popularity": 100,
+  "plays": 2782,
+  "themes": [
+   "backRankMate",
+   "deflection",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "5rk1/pR3Rpp/8/8/6Q1/2qp3P/P5P1/7K b - - 0 27",
+  "setup": "Rxf7",
+  "fen": "6k1/pR3rpp/8/8/6Q1/2qp3P/P5P1/7K w - - 0 28",
+  "line": [
+   "Rb8+",
+   "Rf8",
+   "Qe6+",
+   "Kh8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Rb8+": {
+    "reply": "Rf8",
+    "next": {
+     "Qe6+": {
+      "reply": "Kh8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/rg0UF"
+ },
+ {
+  "id": "PXSjF",
+  "rating": 1270,
+  "popularity": 100,
+  "plays": 2674,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "6k1/2Q4p/4pKp1/3p1p2/3P4/2P1q1P1/1r4P1/8 b - - 1 36",
+  "setup": "Qh6",
+  "fen": "6k1/2Q4p/4pKpq/3p1p2/3P4/2P3P1/1r4P1/8 w - - 2 37",
+  "line": [
+   "Qf7+",
+   "Kh8",
+   "Qe8+",
+   "Qf8+",
+   "Qxf8#"
+  ],
+  "tree": {
+   "Qf7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qe8+": {
+      "reply": "Qf8+",
+      "next": {
+       "Qxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/PXSjF"
+ },
+ {
+  "id": "KPmKu",
+  "rating": 1403,
+  "popularity": 100,
+  "plays": 2643,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "fork",
+   "hangingPiece",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "3Q3k/p4Kb1/5n1r/2p5/8/6P1/Pq6/8 b - - 3 44",
+  "setup": "Ne8",
+  "fen": "3Qn2k/p4Kb1/7r/2p5/8/6P1/Pq6/8 w - - 4 45",
+  "line": [
+   "Qxe8+",
+   "Bf8",
+   "Qxf8+",
+   "Kh7",
+   "Qg8#"
+  ],
+  "tree": {
+   "Qxe8+": {
+    "reply": "Bf8",
+    "next": {
+     "Qxf8+": {
+      "reply": "Kh7",
+      "next": {
+       "Qg8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/KPmKu"
+ },
+ {
+  "id": "RGCY8",
+  "rating": 1396,
+  "popularity": 100,
+  "plays": 2618,
+  "themes": [
+   "advancedPawn",
+   "endgame",
+   "hangingPiece",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 6,
+  "setupFen": "2k5/2P5/2PK4/1P6/5p2/8/8/7b b - - 0 52",
+  "setup": "Bxc6",
+  "fen": "2k5/2P5/2bK4/1P6/5p2/8/8/8 w - - 0 53",
+  "line": [
+   "Kxc6",
+   "f3",
+   "b6",
+   "f2",
+   "b7#"
+  ],
+  "tree": {
+   "Kxc6": {
+    "reply": "f3",
+    "next": {
+     "b6": {
+      "reply": "f2",
+      "next": {
+       "b7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/RGCY8"
+ },
+ {
+  "id": "mQfvN",
+  "rating": 1178,
+  "popularity": 100,
+  "plays": 2593,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "r5k1/4Q1pp/4p3/p7/1p1qP3/8/1P4PP/5R1K b - - 1 32",
+  "setup": "Qxb2",
+  "fen": "r5k1/4Q1pp/4p3/p7/1p2P3/8/1q4PP/5R1K w - - 0 33",
+  "line": [
+   "Qf7+",
+   "Kh8",
+   "Qf8+",
+   "Rxf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Qf7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qf8+": {
+      "reply": "Rxf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/mQfvN"
+ },
+ {
+  "id": "3PClS",
+  "rating": 1434,
+  "popularity": 100,
+  "plays": 2546,
+  "themes": [
+   "endgame",
+   "hookMate",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "8/4pk2/4Np1p/1p1K1P2/1P5P/2b5/p6r/6R1 b - - 1 45",
+  "setup": "a1=Q",
+  "fen": "8/4pk2/4Np1p/1p1K1P2/1P5P/2b5/7r/q5R1 w - - 0 46",
+  "line": [
+   "Rg7+",
+   "Ke8",
+   "Rg8+",
+   "Kd7",
+   "Rd8#"
+  ],
+  "tree": {
+   "Rg7+": {
+    "reply": "Ke8",
+    "next": {
+     "Rg8+": {
+      "reply": "Kd7",
+      "next": {
+       "Rd8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/3PClS"
+ },
+ {
+  "id": "ErGlF",
+  "rating": 1307,
+  "popularity": 100,
+  "plays": 2496,
+  "themes": [
+   "deflection",
+   "endgame",
+   "epauletteMate",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/8/pkR1p3/8/1r6/4r1p1/1PR5/1K6 b - - 5 70",
+  "setup": "Kb5",
+  "fen": "8/8/p1R1p3/1k6/1r6/4r1p1/1PR5/1K6 w - - 6 71",
+  "line": [
+   "R2c5+",
+   "Ka4",
+   "Rxa6+",
+   "Kb3",
+   "Ra3#"
+  ],
+  "tree": {
+   "R2c5+": {
+    "reply": "Ka4",
+    "next": {
+     "Rxa6+": {
+      "reply": "Kb3",
+      "next": {
+       "Ra3#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ErGlF"
+ },
+ {
+  "id": "lJ3dU",
+  "rating": 1282,
+  "popularity": 100,
+  "plays": 2412,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "7k/6pp/P3Qb2/3p3q/5PR1/1r6/5KP1/8 b - - 2 40",
+  "setup": "Ra3",
+  "fen": "7k/6pp/P3Qb2/3p3q/5PR1/r7/5KP1/8 w - - 3 41",
+  "line": [
+   "Qc8+",
+   "Bd8",
+   "Qxd8+",
+   "Qe8",
+   "Qxe8#"
+  ],
+  "tree": {
+   "Qc8+": {
+    "reply": "Bd8",
+    "next": {
+     "Qxd8+": {
+      "reply": "Qe8",
+      "next": {
+       "Qxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/lJ3dU"
+ },
+ {
+  "id": "oTQ94",
+  "rating": 1405,
+  "popularity": 100,
+  "plays": 2309,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "5Q2/7p/5bp1/3p2k1/4nN1P/4P3/2Nq1PK1/8 b - - 0 42",
+  "setup": "Kg4",
+  "fen": "5Q2/7p/5bp1/3p4/4nNkP/4P3/2Nq1PK1/8 w - - 1 43",
+  "line": [
+   "Qc8+",
+   "Kxh4",
+   "Qh3+",
+   "Kg5",
+   "Ne6#"
+  ],
+  "tree": {
+   "Qc8+": {
+    "reply": "Kxh4",
+    "next": {
+     "Qh3+": {
+      "reply": "Kg5",
+      "next": {
+       "Ne6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/oTQ94"
+ },
+ {
+  "id": "CtEkx",
+  "rating": 1415,
+  "popularity": 100,
+  "plays": 2268,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/pR6/3Rp3/1k4r1/8/1P6/PK6/6q1 b - - 7 45",
+  "setup": "Ka5",
+  "fen": "8/pR6/3Rp3/k5r1/8/1P6/PK6/6q1 w - - 8 46",
+  "line": [
+   "b4+",
+   "Ka4",
+   "Ra6+",
+   "Ra5",
+   "Rxa5#"
+  ],
+  "tree": {
+   "b4+": {
+    "reply": "Ka4",
+    "next": {
+     "Ra6+": {
+      "reply": "Ra5",
+      "next": {
+       "Rxa5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/CtEkx"
+ },
+ {
+  "id": "pnZqM",
+  "rating": 1253,
+  "popularity": 100,
+  "plays": 2247,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 12,
+  "setupFen": "6r1/4R3/ppkp4/8/PPP1p3/2K3p1/8/8 b - - 1 45",
+  "setup": "g2",
+  "fen": "6r1/4R3/ppkp4/8/PPP1p3/2K5/6p1/8 w - - 0 46",
+  "line": [
+   "b5+",
+   "axb5",
+   "axb5+",
+   "Kc5",
+   "Rc7#"
+  ],
+  "tree": {
+   "b5+": {
+    "reply": "axb5",
+    "next": {
+     "axb5+": {
+      "reply": "Kc5",
+      "next": {
+       "Rc7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/pnZqM"
+ },
+ {
+  "id": "2pTAq",
+  "rating": 1224,
+  "popularity": 100,
+  "plays": 2244,
+  "themes": [
+   "deflection",
+   "endgame",
+   "epauletteMate",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "3r1k2/5p2/2p1P1p1/1p4P1/p1nP4/7R/6K1/7R b - - 0 38",
+  "setup": "fxe6",
+  "fen": "3r1k2/8/2p1p1p1/1p4P1/p1nP4/7R/6K1/7R w - - 0 39",
+  "line": [
+   "Rh8+",
+   "Ke7",
+   "R1h7+",
+   "Kd6",
+   "Rxd8#"
+  ],
+  "tree": {
+   "Rh8+": {
+    "reply": "Ke7",
+    "next": {
+     "R1h7+": {
+      "reply": "Kd6",
+      "next": {
+       "Rxd8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/2pTAq"
+ },
+ {
+  "id": "LOC0l",
+  "rating": 1208,
+  "popularity": 100,
+  "plays": 2200,
+  "themes": [
+   "attraction",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "3Q1K2/1b3N1k/p2P2p1/1p4p1/1q6/r7/8/1B6 b - - 0 47",
+  "setup": "Rf3",
+  "fen": "3Q1K2/1b3N1k/p2P2p1/1p4p1/1q6/5r2/8/1B6 w - - 1 48",
+  "line": [
+   "Bxg6+",
+   "Kxg6",
+   "Qxg5+",
+   "Kh7",
+   "Qh6#"
+  ],
+  "tree": {
+   "Bxg6+": {
+    "reply": "Kxg6",
+    "next": {
+     "Qxg5+": {
+      "reply": "Kh7",
+      "next": {
+       "Qg7#": {
+        "mate": true
+       },
+       "Qg8#": {
+        "mate": true
+       },
+       "Qh6#": {
+        "mate": true
+       },
+       "Qh5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/LOC0l"
+ },
+ {
+  "id": "RzZJ6",
+  "rating": 1283,
+  "popularity": 100,
+  "plays": 2165,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 12,
+  "setupFen": "2k2r2/ppp5/8/3Q4/5q2/2P5/PP5P/1K1R4 b - - 11 32",
+  "setup": "Qxh2",
+  "fen": "2k2r2/ppp5/8/3Q4/8/2P5/PP5q/1K1R4 w - - 0 33",
+  "line": [
+   "Qd7+",
+   "Kb8",
+   "Qd8+",
+   "Rxd8",
+   "Rxd8#"
+  ],
+  "tree": {
+   "Qd7+": {
+    "reply": "Kb8",
+    "next": {
+     "Qd8+": {
+      "reply": "Rxd8",
+      "next": {
+       "Rxd8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/RzZJ6"
+ },
+ {
+  "id": "IrEaz",
+  "rating": 1109,
+  "popularity": 100,
+  "plays": 2163,
+  "themes": [
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame"
+  ],
+  "pieces": 14,
+  "setupFen": "5r2/6kp/r3bB2/pp6/2p4Q/7q/P7/5RK1 b - - 0 30",
+  "setup": "Kg6",
+  "fen": "5r2/7p/r3bBk1/pp6/2p4Q/7q/P7/5RK1 w - - 1 31",
+  "line": [
+   "Qg5+",
+   "Kf7",
+   "Qg7+",
+   "Ke8",
+   "Qe7#"
+  ],
+  "tree": {
+   "Qg5+": {
+    "reply": "Kf7",
+    "next": {
+     "Qg7+": {
+      "reply": "Ke8",
+      "next": {
+       "Qe7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/IrEaz"
+ },
+ {
+  "id": "byJno",
+  "rating": 1349,
+  "popularity": 100,
+  "plays": 2117,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "2N3k1/6p1/p6p/1bp2Q1P/3qp3/8/2P5/1K6 b - - 6 44",
+  "setup": "Bd7",
+  "fen": "2N3k1/3b2p1/p6p/2p2Q1P/3qp3/8/2P5/1K6 w - - 7 45",
+  "line": [
+   "Ne7+",
+   "Kh8",
+   "Qf8+",
+   "Kh7",
+   "Qg8#"
+  ],
+  "tree": {
+   "Ne7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qf8+": {
+      "reply": "Kh7",
+      "next": {
+       "Qg8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/byJno"
+ },
+ {
+  "id": "nV7hb",
+  "rating": 1385,
+  "popularity": 100,
+  "plays": 2106,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "8/4r1pk/p1R1N3/P4P1p/1P6/6K1/8/7r b - - 0 45",
+  "setup": "Rb1",
+  "fen": "8/4r1pk/p1R1N3/P4P1p/1P6/6K1/8/1r6 w - - 1 46",
+  "line": [
+   "Ng5+",
+   "Kh8",
+   "Rc8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Ng5+": {
+    "reply": "Kh8",
+    "next": {
+     "Rc8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/nV7hb"
+ },
+ {
+  "id": "3rDsd",
+  "rating": 1297,
+  "popularity": 100,
+  "plays": 2053,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "7k/6p1/2R4p/p1p2K2/5P2/6P1/1b5P/r7 b - - 1 39",
+  "setup": "a4",
+  "fen": "7k/6p1/2R4p/2p2K2/p4P2/6P1/1b5P/r7 w - - 0 40",
+  "line": [
+   "Kg6",
+   "Re1",
+   "Rc8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Re1",
+    "next": {
+     "Rc8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/3rDsd"
+ },
+ {
+  "id": "H8Pnk",
+  "rating": 1046,
+  "popularity": 100,
+  "plays": 2042,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "5r1k/7p/1p5Q/2b2B2/2P2P2/8/q6P/4R2K b - - 0 41",
+  "setup": "Rxf5",
+  "fen": "7k/7p/1p5Q/2b2r2/2P2P2/8/q6P/4R2K w - - 0 42",
+  "line": [
+   "Re8+",
+   "Bf8",
+   "Rxf8+",
+   "Rxf8",
+   "Qxf8#"
+  ],
+  "tree": {
+   "Re8+": {
+    "reply": "Bf8",
+    "next": {
+     "Rxf8+": {
+      "reply": "Rxf8",
+      "next": {
+       "Qxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/H8Pnk"
+ },
+ {
+  "id": "12rZg",
+  "rating": 1381,
+  "popularity": 100,
+  "plays": 2030,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "5r2/pp4kR/2p5/8/4P1b1/2q1B1K1/P5P1/7R b - - 2 31",
+  "setup": "Kf6",
+  "fen": "5r2/pp5R/2p2k2/8/4P1b1/2q1B1K1/P5P1/7R w - - 3 32",
+  "line": [
+   "R1h6+",
+   "Ke5",
+   "Re7+",
+   "Be6",
+   "Rhxe6#"
+  ],
+  "tree": {
+   "R1h6+": {
+    "reply": "Ke5",
+    "next": {
+     "Re7+": {
+      "reply": "Be6",
+      "next": {
+       "Rexe6#": {
+        "mate": true
+       },
+       "Rhxe6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/12rZg"
+ },
+ {
+  "id": "nl5lp",
+  "rating": 1449,
+  "popularity": 100,
+  "plays": 2026,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "5rk1/1Q3ppp/4R3/8/3P4/1P5P/r2q2P1/5R1K b - - 0 27",
+  "setup": "Qxd4",
+  "fen": "5rk1/1Q3ppp/4R3/8/3q4/1P5P/r5P1/5R1K w - - 0 28",
+  "line": [
+   "Qxf7+",
+   "Rxf7",
+   "Re8+",
+   "Rf8",
+   "Rfxf8#"
+  ],
+  "tree": {
+   "Qxf7+": {
+    "reply": "Rxf7",
+    "next": {
+     "Re8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rexf8#": {
+        "mate": true
+       },
+       "Rfxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/nl5lp"
+ },
+ {
+  "id": "lFIH3",
+  "rating": 1308,
+  "popularity": 100,
+  "plays": 2014,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "pillsburysMate"
+  ],
+  "pieces": 14,
+  "setupFen": "8/5pkp/R7/2p1ppB1/P2b4/1r5P/6PK/8 b - - 1 33",
+  "setup": "e4",
+  "fen": "8/5pkp/R7/2p2pB1/P2bp3/1r5P/6PK/8 w - - 0 34",
+  "line": [
+   "Bh6+",
+   "Kh8",
+   "Ra8+",
+   "Rb8",
+   "Rxb8#"
+  ],
+  "tree": {
+   "Bh6+": {
+    "reply": "Kh8",
+    "next": {
+     "Ra8+": {
+      "reply": "Rb8",
+      "next": {
+       "Rxb8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/lFIH3"
+ },
+ {
+  "id": "nFZPq",
+  "rating": 1285,
+  "popularity": 100,
+  "plays": 1990,
+  "themes": [
+   "endgame",
+   "epauletteMate",
+   "long",
+   "master",
+   "mate",
+   "mateIn3",
+   "operaMate"
+  ],
+  "pieces": 11,
+  "setupFen": "8/1R6/3pB1p1/1p1P3k/3bK3/7P/5r2/8 b - - 5 38",
+  "setup": "Bc5",
+  "fen": "8/1R6/3pB1p1/1pbP3k/4K3/7P/5r2/8 w - - 6 39",
+  "line": [
+   "Rh7+",
+   "Kg5",
+   "h4+",
+   "Kf6",
+   "Rf7#"
+  ],
+  "tree": {
+   "Rh7+": {
+    "reply": "Kg5",
+    "next": {
+     "h4+": {
+      "reply": "Kf6",
+      "next": {
+       "Rf7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/nFZPq"
+ },
+ {
+  "id": "ZaYnB",
+  "rating": 1316,
+  "popularity": 100,
+  "plays": 1909,
+  "themes": [
+   "discoveredAttack",
+   "discoveredCheck",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "pillsburysMate"
+  ],
+  "pieces": 12,
+  "setupFen": "5k2/4npp1/4P3/1B2Pb2/P4r2/8/1K1R4/2r5 b - - 0 31",
+  "setup": "fxe6",
+  "fen": "5k2/4n1p1/4p3/1B2Pb2/P4r2/8/1K1R4/2r5 w - - 0 32",
+  "line": [
+   "Rd8+",
+   "Kf7",
+   "Be8+",
+   "Kg8",
+   "Bg6#"
+  ],
+  "tree": {
+   "Rd8+": {
+    "reply": "Kf7",
+    "next": {
+     "Be8+": {
+      "reply": "Kg8",
+      "next": {
+       "Bg6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ZaYnB"
+ },
+ {
+  "id": "5qWhV",
+  "rating": 1340,
+  "popularity": 100,
+  "plays": 1900,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "8/p5pk/5p2/7Q/3n1q2/P6P/1P1r1N2/5BK1 b - - 4 38",
+  "setup": "Kg8",
+  "fen": "6k1/p5p1/5p2/7Q/3n1q2/P6P/1P1r1N2/5BK1 w - - 5 39",
+  "line": [
+   "Bc4+",
+   "Ne6",
+   "Bxe6+",
+   "Kf8",
+   "Qf7#"
+  ],
+  "tree": {
+   "Bc4+": {
+    "reply": "Ne6",
+    "next": {
+     "Bxe6+": {
+      "reply": "Kf8",
+      "next": {
+       "Qf7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/5qWhV"
+ },
+ {
+  "id": "9Y8Gu",
+  "rating": 1342,
+  "popularity": 100,
+  "plays": 1875,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "2r3k1/5pp1/p6p/8/7q/1P3Q2/P1r2P2/4RK2 b - - 2 27",
+  "setup": "R8c3",
+  "fen": "6k1/5pp1/p6p/8/7q/1Pr2Q2/P1r2P2/4RK2 w - - 3 28",
+  "line": [
+   "Re8+",
+   "Kh7",
+   "Qf5+",
+   "g6",
+   "Qxf7#"
+  ],
+  "tree": {
+   "Re8+": {
+    "reply": "Kh7",
+    "next": {
+     "Qf5+": {
+      "reply": "g6",
+      "next": {
+       "Qxf7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/9Y8Gu"
+ },
+ {
+  "id": "UJCEv",
+  "rating": 1045,
+  "popularity": 100,
+  "plays": 1872,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 9,
+  "setupFen": "8/8/R4n2/5pkp/8/3r2P1/5PK1/8 b - - 3 41",
+  "setup": "Ne4",
+  "fen": "8/8/R7/5pkp/4n3/3r2P1/5PK1/8 w - - 4 42",
+  "line": [
+   "f4+",
+   "Kg4",
+   "Rg6+",
+   "Ng5",
+   "Rxg5#"
+  ],
+  "tree": {
+   "f4+": {
+    "reply": "Kg4",
+    "next": {
+     "Rg6+": {
+      "reply": "Ng5",
+      "next": {
+       "Rxg5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/UJCEv"
+ },
+ {
+  "id": "2DgNI",
+  "rating": 1273,
+  "popularity": 100,
+  "plays": 1862,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "7r/4q2p/6p1/8/Q5P1/2N5/1r5P/k1n3K1 b - - 5 38",
+  "setup": "Na2",
+  "fen": "7r/4q2p/6p1/8/Q5P1/2N5/nr5P/k5K1 w - - 6 39",
+  "line": [
+   "Qd1+",
+   "Nc1",
+   "Qxc1+",
+   "Rb1",
+   "Qxb1#"
+  ],
+  "tree": {
+   "Qd1+": {
+    "reply": "Nc1",
+    "next": {
+     "Qxc1+": {
+      "reply": "Rb1",
+      "next": {
+       "Qxb1#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/2DgNI"
+ },
+ {
+  "id": "ddhdl",
+  "rating": 1221,
+  "popularity": 100,
+  "plays": 1832,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 11,
+  "setupFen": "r6k/3R2R1/7P/8/3P4/6K1/p4PP1/7r b - - 3 45",
+  "setup": "a1=Q",
+  "fen": "r6k/3R2R1/7P/8/3P4/6K1/5PP1/q6r w - - 0 46",
+  "line": [
+   "Rh7+",
+   "Kg8",
+   "Rdg7+",
+   "Kf8",
+   "Rh8#"
+  ],
+  "tree": {
+   "Rh7+": {
+    "reply": "Kg8",
+    "next": {
+     "Rdg7+": {
+      "reply": "Kf8",
+      "next": {
+       "Rh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ddhdl"
+ },
+ {
+  "id": "kHElu",
+  "rating": 1354,
+  "popularity": 100,
+  "plays": 1831,
+  "themes": [
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame",
+   "sacrifice"
+  ],
+  "pieces": 12,
+  "setupFen": "6rk/6pp/2q5/8/p2QPr2/8/2N2RR1/6K1 b - - 2 56",
+  "setup": "Rxe4",
+  "fen": "6rk/6pp/2q5/8/p2Qr3/8/2N2RR1/6K1 w - - 0 57",
+  "line": [
+   "Qxg7+",
+   "Rxg7",
+   "Rf8+",
+   "Rg8",
+   "Rgxg8#"
+  ],
+  "tree": {
+   "Qxg7+": {
+    "reply": "Rxg7",
+    "next": {
+     "Rf8+": {
+      "reply": "Rg8",
+      "next": {
+       "Rfxg8#": {
+        "mate": true
+       },
+       "Rgxg8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/kHElu"
+ },
+ {
+  "id": "rIf9v",
+  "rating": 1389,
+  "popularity": 100,
+  "plays": 1802,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 9,
+  "setupFen": "8/1n1N2p1/4K2k/r5p1/8/1P5r/8/5R2 b - - 5 45",
+  "setup": "Rxb3",
+  "fen": "8/1n1N2p1/4K2k/r5p1/8/1r6/8/5R2 w - - 0 46",
+  "line": [
+   "Rh1+",
+   "Rh3",
+   "Rxh3+",
+   "Kg6",
+   "Nf8#"
+  ],
+  "tree": {
+   "Rh1+": {
+    "reply": "Rh3",
+    "next": {
+     "Rxh3+": {
+      "reply": "Kg6",
+      "next": {
+       "Nf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/rIf9v"
+ },
+ {
+  "id": "pmrsy",
+  "rating": 1226,
+  "popularity": 100,
+  "plays": 1795,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "2k5/p1p2K2/2p5/3n2R1/1P1PN3/2P3p1/P5r1/8 b - - 9 44",
+  "setup": "Rxa2",
+  "fen": "2k5/p1p2K2/2p5/3n2R1/1P1PN3/2P3p1/r7/8 w - - 0 45",
+  "line": [
+   "Rg8+",
+   "Kb7",
+   "Nc5+",
+   "Kb6",
+   "Rb8#"
+  ],
+  "tree": {
+   "Rg8+": {
+    "reply": "Kb7",
+    "next": {
+     "Nc5+": {
+      "reply": "Kb6",
+      "next": {
+       "Rb8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/pmrsy"
+ },
+ {
+  "id": "AraTX",
+  "rating": 1440,
+  "popularity": 100,
+  "plays": 1766,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 9,
+  "setupFen": "8/2r2k1p/1R3P2/4PK2/2p5/8/1p6/8 b - - 5 40",
+  "setup": "c3",
+  "fen": "8/2r2k1p/1R3P2/4PK2/8/2p5/1p6/8 w - - 0 41",
+  "line": [
+   "e6+",
+   "Kg8",
+   "Rb8+",
+   "Rc8",
+   "Rxc8#"
+  ],
+  "tree": {
+   "e6+": {
+    "reply": "Kg8",
+    "next": {
+     "Rb8+": {
+      "reply": "Rc8",
+      "next": {
+       "Rxc8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/AraTX"
+ },
+ {
+  "id": "fjCgp",
+  "rating": 1394,
+  "popularity": 100,
+  "plays": 1708,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "R7/8/p4kpp/3N1p2/3n4/7P/5PPK/r7 b - - 13 44",
+  "setup": "Kg5",
+  "fen": "R7/8/p5pp/3N1pk1/3n4/7P/5PPK/r7 w - - 14 45",
+  "line": [
+   "f4+",
+   "Kh5",
+   "Nf6+",
+   "Kh4",
+   "g3#"
+  ],
+  "tree": {
+   "f4+": {
+    "reply": "Kh5",
+    "next": {
+     "Nf6+": {
+      "reply": "Kh4",
+      "next": {
+       "g3#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/fjCgp"
+ },
+ {
+  "id": "KZMg5",
+  "rating": 1326,
+  "popularity": 100,
+  "plays": 1699,
+  "themes": [
+   "endgame",
+   "long",
+   "master",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "8/1Qpk4/p1pP4/P7/1Pb2K2/5Pr1/7p/8 b - - 1 41",
+  "setup": "h1=Q",
+  "fen": "8/1Qpk4/p1pP4/P7/1Pb2K2/5Pr1/8/7q w - - 0 42",
+  "line": [
+   "Qxc7+",
+   "Ke6",
+   "Qe7+",
+   "Kd5",
+   "Qe5#"
+  ],
+  "tree": {
+   "Qxc7+": {
+    "reply": "Ke6",
+    "next": {
+     "Qe7+": {
+      "reply": "Kd5",
+      "next": {
+       "Qe5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/KZMg5"
+ },
+ {
+  "id": "I79GC",
+  "rating": 1295,
+  "popularity": 100,
+  "plays": 1697,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "r4rk1/4Rppp/1q6/8/p7/5QP1/5RKP/8 b - - 9 28",
+  "setup": "Ra7",
+  "fen": "5rk1/r3Rppp/1q6/8/p7/5QP1/5RKP/8 w - - 10 29",
+  "line": [
+   "Qxf7+",
+   "Rxf7",
+   "Re8+",
+   "Rf8",
+   "Rfxf8#"
+  ],
+  "tree": {
+   "Qxf7+": {
+    "reply": "Rxf7",
+    "next": {
+     "Re8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rexf8#": {
+        "mate": true
+       },
+       "Rfxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/I79GC"
+ },
+ {
+  "id": "IUeij",
+  "rating": 1362,
+  "popularity": 100,
+  "plays": 1693,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 8,
+  "setupFen": "8/1p6/pk5R/1P6/1KP1r3/8/8/8 b - - 1 49",
+  "setup": "Ka7",
+  "fen": "8/kp6/p6R/1P6/1KP1r3/8/8/8 w - - 2 50",
+  "line": [
+   "b6+",
+   "Kb8",
+   "Rh8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "b6+": {
+    "reply": "Kb8",
+    "next": {
+     "Rh8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/IUeij"
+ },
+ {
+  "id": "cuShr",
+  "rating": 1379,
+  "popularity": 100,
+  "plays": 1684,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "8/1R5p/p3p1p1/4N2k/4K3/1P4rP/1r6/8 b - - 6 44",
+  "setup": "Rbxb3",
+  "fen": "8/1R5p/p3p1p1/4N2k/4K3/1r4rP/8/8 w - - 0 45",
+  "line": [
+   "Rxh7+",
+   "Kg5",
+   "h4+",
+   "Kf6",
+   "Nd7#"
+  ],
+  "tree": {
+   "Rxh7+": {
+    "reply": "Kg5",
+    "next": {
+     "h4+": {
+      "reply": "Kf6",
+      "next": {
+       "Rf7#": {
+        "mate": true
+       },
+       "Nd7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/cuShr"
+ },
+ {
+  "id": "6NlUv",
+  "rating": 1146,
+  "popularity": 100,
+  "plays": 1676,
+  "themes": [
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "middlegame"
+  ],
+  "pieces": 12,
+  "setupFen": "r2k3r/1R6/4N1p1/3Pn3/2n5/8/P5K1/4R3 b - - 6 30",
+  "setup": "Kc8",
+  "fen": "r1k4r/1R6/4N1p1/3Pn3/2n5/8/P5K1/4R3 w - - 7 31",
+  "line": [
+   "Rc7+",
+   "Kb8",
+   "Rb1+",
+   "Nb2",
+   "Rxb2#"
+  ],
+  "tree": {
+   "Rc7+": {
+    "reply": "Kb8",
+    "next": {
+     "Rb1+": {
+      "reply": "Nb2",
+      "next": {
+       "Rxb2#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/6NlUv"
+ },
+ {
+  "id": "4RgTq",
+  "rating": 1231,
+  "popularity": 100,
+  "plays": 1664,
+  "themes": [
+   "arabianMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "4N3/6R1/7k/1p3P1p/1r6/2n3KP/p5P1/8 b - - 0 42",
+  "setup": "a1=Q",
+  "fen": "4N3/6R1/7k/1p3P1p/1r6/2n3KP/6P1/q7 w - - 0 43",
+  "line": [
+   "Rg6+",
+   "Kh7",
+   "Nf6+",
+   "Kh8",
+   "Rg8#"
+  ],
+  "tree": {
+   "Rg6+": {
+    "reply": "Kh7",
+    "next": {
+     "Nf6+": {
+      "reply": "Kh8",
+      "next": {
+       "Rg8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/4RgTq"
+ },
+ {
+  "id": "mVdFf",
+  "rating": 1372,
+  "popularity": 100,
+  "plays": 1657,
+  "themes": [
+   "clearance",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "5rk1/2Q2ppp/8/8/2R2R2/6P1/q4PKP/1r6 b - - 3 28",
+  "setup": "Qa1",
+  "fen": "5rk1/2Q2ppp/8/8/2R2R2/6P1/5PKP/qr6 w - - 4 29",
+  "line": [
+   "Qxf7+",
+   "Rxf7",
+   "Rc8+",
+   "Rf8",
+   "Rfxf8#"
+  ],
+  "tree": {
+   "Qxf7+": {
+    "reply": "Rxf7",
+    "next": {
+     "Rc8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rcxf8#": {
+        "mate": true
+       },
+       "Rfxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/mVdFf"
+ },
+ {
+  "id": "UaToQ",
+  "rating": 1185,
+  "popularity": 100,
+  "plays": 1650,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "3r2k1/2q3p1/5pQp/6P1/p2n3P/8/5P2/4R2K b - - 0 42",
+  "setup": "Nc6",
+  "fen": "3r2k1/2q3p1/2n2pQp/6P1/p6P/8/5P2/4R2K w - - 1 43",
+  "line": [
+   "Re8+",
+   "Rxe8",
+   "Qxe8+",
+   "Kh7",
+   "g6#"
+  ],
+  "tree": {
+   "Re8+": {
+    "reply": "Rxe8",
+    "next": {
+     "Qxe8+": {
+      "reply": "Kh7",
+      "next": {
+       "g6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/UaToQ"
+ },
+ {
+  "id": "vGrvT",
+  "rating": 1338,
+  "popularity": 100,
+  "plays": 1649,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "8/p1p5/3k4/P5p1/1PP4b/4R1rP/7r/3R1K2 b - - 6 37",
+  "setup": "Kc6",
+  "fen": "8/p1p5/2k5/P5p1/1PP4b/4R1rP/7r/3R1K2 w - - 7 38",
+  "line": [
+   "Re6+",
+   "Kb7",
+   "a6+",
+   "Kc8",
+   "Re8#"
+  ],
+  "tree": {
+   "Re6+": {
+    "reply": "Kb7",
+    "next": {
+     "a6+": {
+      "reply": "Kc8",
+      "next": {
+       "Re8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/vGrvT"
+ },
+ {
+  "id": "jqtOS",
+  "rating": 1118,
+  "popularity": 100,
+  "plays": 1629,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "5rk1/8/3p2Q1/2pN4/2PbP3/6PK/1q6/8 b - - 0 36",
+  "setup": "Bg7",
+  "fen": "5rk1/6b1/3p2Q1/2pN4/2P1P3/6PK/1q6/8 w - - 1 37",
+  "line": [
+   "Ne7+",
+   "Kh8",
+   "Qh5+",
+   "Bh6",
+   "Qxh6#"
+  ],
+  "tree": {
+   "Ne7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qh5+": {
+      "reply": "Bh6",
+      "next": {
+       "Qxh6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/jqtOS"
+ },
+ {
+  "id": "5sRU2",
+  "rating": 1291,
+  "popularity": 100,
+  "plays": 1621,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "pin"
+  ],
+  "pieces": 10,
+  "setupFen": "8/kp4R1/p6r/N1P2b2/1P6/8/8/2K5 b - - 2 56",
+  "setup": "Rh7",
+  "fen": "8/kp4Rr/p7/N1P2b2/1P6/8/8/2K5 w - - 3 57",
+  "line": [
+   "Nc6+",
+   "Ka8",
+   "Rg8+",
+   "Bc8",
+   "Rxc8#"
+  ],
+  "tree": {
+   "Nc6+": {
+    "reply": "Ka8",
+    "next": {
+     "Rg8+": {
+      "reply": "Bc8",
+      "next": {
+       "Rxc8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/5sRU2"
+ },
+ {
+  "id": "VTWrX",
+  "rating": 1294,
+  "popularity": 100,
+  "plays": 1589,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 9,
+  "setupFen": "r7/6p1/2Q5/5k2/6P1/5P1K/7P/q7 b - - 0 48",
+  "setup": "Kf4",
+  "fen": "r7/6p1/2Q5/8/5kP1/5P1K/7P/q7 w - - 1 49",
+  "line": [
+   "Qe4+",
+   "Kg5",
+   "Qf5+",
+   "Kh6",
+   "Qh5#"
+  ],
+  "tree": {
+   "Qe4+": {
+    "reply": "Kg5",
+    "next": {
+     "Qf5+": {
+      "reply": "Kh6",
+      "next": {
+       "Qh5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/VTWrX"
+ },
+ {
+  "id": "wBybm",
+  "rating": 1409,
+  "popularity": 100,
+  "plays": 1567,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 9,
+  "setupFen": "8/R5pk/7p/7K/8/7P/p5P1/r7 b - - 1 49",
+  "setup": "Kh8",
+  "fen": "7k/R5p1/7p/7K/8/7P/p5P1/r7 w - - 2 50",
+  "line": [
+   "Kg6",
+   "Rb1",
+   "Ra8+",
+   "Rb8",
+   "Rxb8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rb1",
+    "next": {
+     "Ra8+": {
+      "reply": "Rb8",
+      "next": {
+       "Rxb8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/wBybm"
+ },
+ {
+  "id": "5wO2g",
+  "rating": 1223,
+  "popularity": 100,
+  "plays": 1564,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "operaMate"
+  ],
+  "pieces": 13,
+  "setupFen": "5b2/2R5/3p1pk1/4pN2/4P3/1q1PB2K/1r3P2/8 b - - 0 37",
+  "setup": "Qxd3",
+  "fen": "5b2/2R5/3p1pk1/4pN2/4P3/3qB2K/1r3P2/8 w - - 0 38",
+  "line": [
+   "Nh4+",
+   "Kh5",
+   "Rh7+",
+   "Bh6",
+   "Rxh6#"
+  ],
+  "tree": {
+   "Nh4+": {
+    "reply": "Kh5",
+    "next": {
+     "Rh7+": {
+      "reply": "Bh6",
+      "next": {
+       "Rxh6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/5wO2g"
+ },
+ {
+  "id": "8nrDC",
+  "rating": 1358,
+  "popularity": 100,
+  "plays": 1563,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/5R2/6p1/6k1/R5P1/6K1/p1r2P2/1r6 b - - 3 51",
+  "setup": "a1=Q",
+  "fen": "8/5R2/6p1/6k1/R5P1/6K1/2r2P2/qr6 w - - 0 52",
+  "line": [
+   "f4+",
+   "Kh6",
+   "g5+",
+   "Kh5",
+   "Rh7#"
+  ],
+  "tree": {
+   "f4+": {
+    "reply": "Kh6",
+    "next": {
+     "g5+": {
+      "reply": "Kh5",
+      "next": {
+       "Rh7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/8nrDC"
+ },
+ {
+  "id": "StFx2",
+  "rating": 1225,
+  "popularity": 100,
+  "plays": 1554,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice",
+   "xRayAttack"
+  ],
+  "pieces": 13,
+  "setupFen": "R1r3k1/5ppp/2pq4/Qp6/8/7P/6P1/7K b - - 8 36",
+  "setup": "Qe6",
+  "fen": "R1r3k1/5ppp/2p1q3/Qp6/8/7P/6P1/7K w - - 9 37",
+  "line": [
+   "Qd8+",
+   "Rxd8",
+   "Rxd8+",
+   "Qe8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Qd8+": {
+    "reply": "Rxd8",
+    "next": {
+     "Rxd8+": {
+      "reply": "Qe8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/StFx2"
+ },
+ {
+  "id": "jU0LY",
+  "rating": 1423,
+  "popularity": 100,
+  "plays": 1527,
+  "themes": [
+   "defensiveMove",
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 11,
+  "setupFen": "7k/pppR3P/5p2/5K2/4P1p1/8/2q2P2/8 b - - 2 36",
+  "setup": "Qxf2+",
+  "fen": "7k/pppR3P/5p2/5K2/4P1p1/8/5q2/8 w - - 0 37",
+  "line": [
+   "Kg6",
+   "Qc5",
+   "Rd8+",
+   "Qf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Qc5",
+    "next": {
+     "Rd8+": {
+      "reply": "Qf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/jU0LY"
+ },
+ {
+  "id": "CcQoi",
+  "rating": 1144,
+  "popularity": 100,
+  "plays": 1516,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "r5k1/pp2Q1pp/2p4q/3p4/8/1P6/6P1/5RK1 b - - 3 30",
+  "setup": "b5",
+  "fen": "r5k1/p3Q1pp/2p4q/1p1p4/8/1P6/6P1/5RK1 w - - 0 31",
+  "line": [
+   "Qf7+",
+   "Kh8",
+   "Qf8+",
+   "Rxf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Qf7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qf8+": {
+      "reply": "Rxf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/CcQoi"
+ },
+ {
+  "id": "iKSTS",
+  "rating": 1273,
+  "popularity": 100,
+  "plays": 1513,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "8/p7/4R1p1/5p1p/P1Bbk2P/6P1/3r1P2/6K1 b - - 7 47",
+  "setup": "Kf3",
+  "fen": "8/p7/4R1p1/5p1p/P1Bb3P/5kP1/3r1P2/6K1 w - - 8 48",
+  "line": [
+   "Bd5+",
+   "Kg4",
+   "Rxg6+",
+   "Kh3",
+   "Bg2#"
+  ],
+  "tree": {
+   "Bd5+": {
+    "reply": "Kg4",
+    "next": {
+     "Rxg6+": {
+      "reply": "Kh3",
+      "next": {
+       "Bg2#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/iKSTS"
+ },
+ {
+  "id": "ZLbDw",
+  "rating": 1340,
+  "popularity": 100,
+  "plays": 1509,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "3r4/2q4p/8/k4Q2/8/2p5/P2p2PP/1R5K b - - 3 46",
+  "setup": "Ka6",
+  "fen": "3r4/2q4p/k7/5Q2/8/2p5/P2p2PP/1R5K w - - 4 47",
+  "line": [
+   "Qb5+",
+   "Ka7",
+   "Qa4+",
+   "Qa5",
+   "Qxa5#"
+  ],
+  "tree": {
+   "Qb5+": {
+    "reply": "Ka7",
+    "next": {
+     "Qa4+": {
+      "reply": "Qa5",
+      "next": {
+       "Qxa5#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ZLbDw"
+ },
+ {
+  "id": "65t5G",
+  "rating": 1430,
+  "popularity": 100,
+  "plays": 1504,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 10,
+  "setupFen": "7k/6p1/4n2p/R4K2/P3P3/7P/8/4r3 b - - 9 50",
+  "setup": "Ng5",
+  "fen": "7k/6p1/7p/R4Kn1/P3P3/7P/8/4r3 w - - 10 51",
+  "line": [
+   "Kg6",
+   "Rxe4",
+   "Ra8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rxe4",
+    "next": {
+     "Ra8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/65t5G"
+ },
+ {
+  "id": "q7vNl",
+  "rating": 1180,
+  "popularity": 99,
+  "plays": 19244,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "master",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "4k3/8/p7/1p3QN1/7P/2p5/1b4PK/3q4 b - - 3 52",
+  "setup": "c2",
+  "fen": "4k3/8/p7/1p3QN1/7P/8/1bp3PK/3q4 w - - 0 53",
+  "line": [
+   "Qf7+",
+   "Kd8",
+   "Ne6+",
+   "Kc8",
+   "Qc7#"
+  ],
+  "tree": {
+   "Qf7+": {
+    "reply": "Kd8",
+    "next": {
+     "Ne6+": {
+      "reply": "Kc8",
+      "next": {
+       "Qc7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/q7vNl"
+ },
+ {
+  "id": "wf5IG",
+  "rating": 1172,
+  "popularity": 99,
+  "plays": 15119,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 11,
+  "setupFen": "8/1r4pp/4kp2/6P1/6KP/rp1R4/1R6/8 b - - 1 48",
+  "setup": "fxg5",
+  "fen": "8/1r4pp/4k3/6p1/6KP/rp1R4/1R6/8 w - - 0 49",
+  "line": [
+   "Re2+",
+   "Kf7",
+   "Rf3+",
+   "Kg8",
+   "Re8#"
+  ],
+  "tree": {
+   "Re2+": {
+    "reply": "Kf7",
+    "next": {
+     "Rf3+": {
+      "reply": "Kg8",
+      "next": {
+       "Re8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/wf5IG"
+ },
+ {
+  "id": "RTUog",
+  "rating": 1140,
+  "popularity": 99,
+  "plays": 7689,
+  "themes": [
+   "endgame",
+   "hookMate",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "8/2R5/4rkp1/1r2p2p/1P1p4/5P1P/5NP1/6K1 b - - 1 41",
+  "setup": "Rxb4",
+  "fen": "8/2R5/4rkp1/4p2p/1r1p4/5P1P/5NP1/6K1 w - - 0 42",
+  "line": [
+   "Ne4+",
+   "Kf5",
+   "Rf7+",
+   "Rf6",
+   "Rxf6#"
+  ],
+  "tree": {
+   "Ne4+": {
+    "reply": "Kf5",
+    "next": {
+     "Rf7+": {
+      "reply": "Rf6",
+      "next": {
+       "Rxf6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/RTUog"
+ },
+ {
+  "id": "gWOBG",
+  "rating": 1346,
+  "popularity": 99,
+  "plays": 7412,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenEndgame"
+  ],
+  "pieces": 13,
+  "setupFen": "7R/p1p3k1/1p1p2P1/4qp2/8/1P6/1PPQ4/2K5 b - - 0 24",
+  "setup": "Kxh8",
+  "fen": "7k/p1p5/1p1p2P1/4qp2/8/1P6/1PPQ4/2K5 w - - 0 25",
+  "line": [
+   "Qh6+",
+   "Kg8",
+   "Qh7+",
+   "Kf8",
+   "Qf7#"
+  ],
+  "tree": {
+   "Qh6+": {
+    "reply": "Kg8",
+    "next": {
+     "Qh7+": {
+      "reply": "Kf8",
+      "next": {
+       "Qf7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/gWOBG"
+ },
+ {
+  "id": "0AhhO",
+  "rating": 1303,
+  "popularity": 99,
+  "plays": 7032,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "5rk1/5ppp/1q6/1p6/8/4RQ2/2r3PP/5R1K b - - 1 24",
+  "setup": "b4",
+  "fen": "5rk1/5ppp/1q6/8/1p6/4RQ2/2r3PP/5R1K w - - 0 25",
+  "line": [
+   "Qxf7+",
+   "Rxf7",
+   "Re8+",
+   "Rf8",
+   "Rfxf8#"
+  ],
+  "tree": {
+   "Qxf7+": {
+    "reply": "Rxf7",
+    "next": {
+     "Re8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rexf8#": {
+        "mate": true
+       },
+       "Rfxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/0AhhO"
+ },
+ {
+  "id": "k7zZG",
+  "rating": 1239,
+  "popularity": 99,
+  "plays": 6711,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "8/p1Q5/8/kp3p2/3P1p2/2P5/PP4rq/3RK3 b - - 3 40",
+  "setup": "Ka6",
+  "fen": "8/p1Q5/k7/1p3p2/3P1p2/2P5/PP4rq/3RK3 w - - 4 41",
+  "line": [
+   "Qc6+",
+   "Ka5",
+   "b4+",
+   "Ka4",
+   "Qa6#"
+  ],
+  "tree": {
+   "Qc6+": {
+    "reply": "Ka5",
+    "next": {
+     "b4+": {
+      "reply": "Ka4",
+      "next": {
+       "Qa6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/k7zZG"
+ },
+ {
+  "id": "eMVjr",
+  "rating": 1271,
+  "popularity": 99,
+  "plays": 6411,
+  "themes": [
+   "attraction",
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 13,
+  "setupFen": "6rk/1R4R1/1p4K1/p1p4p/3p4/Pr6/7P/8 b - - 2 40",
+  "setup": "Re3",
+  "fen": "6rk/1R4R1/1p4K1/p1p4p/3p4/P3r3/7P/8 w - - 3 41",
+  "line": [
+   "Rxg8+",
+   "Kxg8",
+   "Rb8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Rxg8+": {
+    "reply": "Kxg8",
+    "next": {
+     "Rb8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/eMVjr"
+ },
+ {
+  "id": "nWy6N",
+  "rating": 1384,
+  "popularity": 99,
+  "plays": 6309,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "fork",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "2R5/ppn2r1k/5P2/5KPP/3r4/8/3p4/8 b - - 0 45",
+  "setup": "d1=Q",
+  "fen": "2R5/ppn2r1k/5P2/5KPP/3r4/8/8/3q4 w - - 0 46",
+  "line": [
+   "g6+",
+   "Kh6",
+   "Rh8+",
+   "Rh7",
+   "Rxh7#"
+  ],
+  "tree": {
+   "g6+": {
+    "reply": "Kh6",
+    "next": {
+     "Rh8+": {
+      "reply": "Rh7",
+      "next": {
+       "Rxh7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/nWy6N"
+ },
+ {
+  "id": "svlqv",
+  "rating": 1385,
+  "popularity": 99,
+  "plays": 6036,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 9,
+  "setupFen": "8/3R2k1/p6p/1p3K1P/1r3P2/8/8/8 b - - 1 46",
+  "setup": "Kh8",
+  "fen": "7k/3R4/p6p/1p3K1P/1r3P2/8/8/8 w - - 2 47",
+  "line": [
+   "Kg6",
+   "Rxf4",
+   "Rd8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Kg6": {
+    "reply": "Rxf4",
+    "next": {
+     "Rd8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/svlqv"
+ },
+ {
+  "id": "91lkE",
+  "rating": 1350,
+  "popularity": 99,
+  "plays": 5867,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "k4r2/2RR4/P7/8/1P3p2/3p1K2/4p3/8 b - - 1 45",
+  "setup": "e1=Q",
+  "fen": "k4r2/2RR4/P7/8/1P3p2/3p1K2/8/4q3 w - - 0 46",
+  "line": [
+   "Ra7+",
+   "Kb8",
+   "Rdb7+",
+   "Kc8",
+   "Ra8#"
+  ],
+  "tree": {
+   "Ra7+": {
+    "reply": "Kb8",
+    "next": {
+     "Rdb7+": {
+      "reply": "Kc8",
+      "next": {
+       "Ra8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/91lkE"
+ },
+ {
+  "id": "jKESX",
+  "rating": 1132,
+  "popularity": 99,
+  "plays": 5825,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "8/p5pk/5p1p/8/4Q3/5PR1/P2r3q/5K2 b - - 3 34",
+  "setup": "Kg8",
+  "fen": "6k1/p5p1/5p1p/8/4Q3/5PR1/P2r3q/5K2 w - - 4 35",
+  "line": [
+   "Qe8+",
+   "Kh7",
+   "Qg6+",
+   "Kh8",
+   "Qxg7#"
+  ],
+  "tree": {
+   "Qe8+": {
+    "reply": "Kh7",
+    "next": {
+     "Qg6+": {
+      "reply": "Kh8",
+      "next": {
+       "Qxg7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/jKESX"
+ },
+ {
+  "id": "BQn7c",
+  "rating": 1149,
+  "popularity": 99,
+  "plays": 5404,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "operaMate"
+  ],
+  "pieces": 11,
+  "setupFen": "r7/8/2R5/2pP1k2/2P4P/2b2K2/p7/3B4 b - - 2 44",
+  "setup": "a1=Q",
+  "fen": "r7/8/2R5/2pP1k2/2P4P/2b2K2/8/q2B4 w - - 0 45",
+  "line": [
+   "Bc2+",
+   "Ke5",
+   "Re6+",
+   "Kd4",
+   "Re4#"
+  ],
+  "tree": {
+   "Bc2+": {
+    "reply": "Ke5",
+    "next": {
+     "Re6+": {
+      "reply": "Kd4",
+      "next": {
+       "Re4#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/BQn7c"
+ },
+ {
+  "id": "DTGET",
+  "rating": 1197,
+  "popularity": 99,
+  "plays": 5158,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "4r1k1/1p1Q2pp/p7/3p4/8/8/Pq4PP/5R1K b - - 2 34",
+  "setup": "Qe2",
+  "fen": "4r1k1/1p1Q2pp/p7/3p4/8/8/P3q1PP/5R1K w - - 3 35",
+  "line": [
+   "Qf7+",
+   "Kh8",
+   "Qf8+",
+   "Rxf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Qf7+": {
+    "reply": "Kh8",
+    "next": {
+     "Qf8+": {
+      "reply": "Rxf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/DTGET"
+ },
+ {
+  "id": "ME4ag",
+  "rating": 1368,
+  "popularity": 99,
+  "plays": 5075,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "5k2/pp3p2/4pBp1/3p1r1q/3Q4/8/P2K1N2/8 b - - 6 37",
+  "setup": "Qf3",
+  "fen": "5k2/pp3p2/4pBp1/3p1r2/3Q4/5q2/P2K1N2/8 w - - 7 38",
+  "line": [
+   "Qc5+",
+   "Kg8",
+   "Qc8+",
+   "Kh7",
+   "Qh8#"
+  ],
+  "tree": {
+   "Qc5+": {
+    "reply": "Kg8",
+    "next": {
+     "Qc8+": {
+      "reply": "Kh7",
+      "next": {
+       "Qh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ME4ag"
+ },
+ {
+  "id": "nvjAf",
+  "rating": 1419,
+  "popularity": 99,
+  "plays": 4911,
+  "themes": [
+   "cornerMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "8/6b1/6Rk/4Np2/8/6PP/5PK1/r1q5 b - - 0 42",
+  "setup": "Kh5",
+  "fen": "8/6b1/6R1/4Np1k/8/6PP/5PK1/r1q5 w - - 1 43",
+  "line": [
+   "g4+",
+   "fxg4",
+   "hxg4+",
+   "Kh4",
+   "Nf3#"
+  ],
+  "tree": {
+   "g4+": {
+    "reply": "fxg4",
+    "next": {
+     "hxg4+": {
+      "reply": "Kh4",
+      "next": {
+       "Nf3#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/nvjAf"
+ },
+ {
+  "id": "3yOR5",
+  "rating": 1308,
+  "popularity": 99,
+  "plays": 4703,
+  "themes": [
+   "attraction",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 13,
+  "setupFen": "6rk/R4Qp1/6Pp/7P/3pq3/p4P2/6K1/8 b - - 0 41",
+  "setup": "Qe5",
+  "fen": "6rk/R4Qp1/6Pp/4q2P/3p4/p4P2/6K1/8 w - - 1 42",
+  "line": [
+   "Qxg8+",
+   "Kxg8",
+   "Ra8+",
+   "Qb8",
+   "Rxb8#"
+  ],
+  "tree": {
+   "Qxg8+": {
+    "reply": "Kxg8",
+    "next": {
+     "Ra8+": {
+      "reply": "Qb8",
+      "next": {
+       "Rxb8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/3yOR5"
+ },
+ {
+  "id": "mTclJ",
+  "rating": 1208,
+  "popularity": 99,
+  "plays": 4639,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 12,
+  "setupFen": "8/3k1Qp1/4p3/pN1p4/r7/4q2P/6PK/8 b - - 0 36",
+  "setup": "Kd8",
+  "fen": "3k4/5Qp1/4p3/pN1p4/r7/4q2P/6PK/8 w - - 1 37",
+  "line": [
+   "Qc7+",
+   "Ke8",
+   "Nd6+",
+   "Kf8",
+   "Qf7#"
+  ],
+  "tree": {
+   "Qc7+": {
+    "reply": "Ke8",
+    "next": {
+     "Nd6+": {
+      "reply": "Kf8",
+      "next": {
+       "Qd8#": {
+        "mate": true
+       },
+       "Qf7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/mTclJ"
+ },
+ {
+  "id": "prVqH",
+  "rating": 1365,
+  "popularity": 99,
+  "plays": 4623,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/6r1/3K4/p6R/P1pk4/2p4R/5r2/8 b - - 1 49",
+  "setup": "c2",
+  "fen": "8/6r1/3K4/p6R/P1pk4/7R/2p2r2/8 w - - 0 50",
+  "line": [
+   "R5h4+",
+   "Rg4",
+   "Rxg4+",
+   "Rf4",
+   "Rxf4#"
+  ],
+  "tree": {
+   "R5h4+": {
+    "reply": "Rg4",
+    "next": {
+     "Rxg4+": {
+      "reply": "Rf4",
+      "next": {
+       "Rxf4#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/prVqH"
+ },
+ {
+  "id": "2AxmC",
+  "rating": 1174,
+  "popularity": 99,
+  "plays": 4590,
+  "themes": [
+   "attraction",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "2R3k1/5p2/4pPp1/3q2Qp/1p6/8/1r4PP/7K b - - 1 35",
+  "setup": "Kh7",
+  "fen": "2R5/5p1k/4pPp1/3q2Qp/1p6/8/1r4PP/7K w - - 2 36",
+  "line": [
+   "Rh8+",
+   "Kxh8",
+   "Qh6+",
+   "Kg8",
+   "Qg7#"
+  ],
+  "tree": {
+   "Rh8+": {
+    "reply": "Kxh8",
+    "next": {
+     "Qh6+": {
+      "reply": "Kg8",
+      "next": {
+       "Qg7#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/2AxmC"
+ },
+ {
+  "id": "BLhDf",
+  "rating": 1173,
+  "popularity": 99,
+  "plays": 4450,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "fork",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "b6k/p4Q2/2p3K1/2P2r2/8/1R4Pq/P7/8 b - - 2 43",
+  "setup": "Rxf7",
+  "fen": "b6k/p4r2/2p3K1/2P5/8/1R4Pq/P7/8 w - - 0 44",
+  "line": [
+   "Rb8+",
+   "Qc8",
+   "Rxc8+",
+   "Rf8",
+   "Rxf8#"
+  ],
+  "tree": {
+   "Rb8+": {
+    "reply": "Qc8",
+    "next": {
+     "Rxc8+": {
+      "reply": "Rf8",
+      "next": {
+       "Rxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/BLhDf"
+ },
+ {
+  "id": "5Rztp",
+  "rating": 1306,
+  "popularity": 99,
+  "plays": 4444,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 14,
+  "setupFen": "4R2R/p2r1kp1/b2r2p1/1p6/5PP1/8/PK6/8 b - - 6 36",
+  "setup": "g5",
+  "fen": "4R2R/p2r1kp1/b2r4/1p4p1/5PP1/8/PK6/8 w - - 0 37",
+  "line": [
+   "Rhf8+",
+   "Kg6",
+   "f5+",
+   "Kh7",
+   "Rh8#"
+  ],
+  "tree": {
+   "Rhf8+": {
+    "reply": "Kg6",
+    "next": {
+     "f5+": {
+      "reply": "Kh7",
+      "next": {
+       "Rh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/5Rztp"
+ },
+ {
+  "id": "tTepe",
+  "rating": 1094,
+  "popularity": 99,
+  "plays": 4230,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 13,
+  "setupFen": "3r3k/4RQpp/8/p1p1q3/8/7P/5PP1/6K1 b - - 1 31",
+  "setup": "Qf6",
+  "fen": "3r3k/4RQpp/5q2/p1p5/8/7P/5PP1/6K1 w - - 2 32",
+  "line": [
+   "Re8+",
+   "Rxe8",
+   "Qxe8+",
+   "Qf8",
+   "Qxf8#"
+  ],
+  "tree": {
+   "Re8+": {
+    "reply": "Rxe8",
+    "next": {
+     "Qxe8+": {
+      "reply": "Qf8",
+      "next": {
+       "Qxf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/tTepe"
+ },
+ {
+  "id": "eqVAB",
+  "rating": 1424,
+  "popularity": 99,
+  "plays": 4228,
+  "themes": [
+   "endgame",
+   "exposedKing",
+   "long",
+   "mate",
+   "mateIn3",
+   "queenRookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "3r2k1/5RR1/7P/4p3/8/5K2/1r3P2/q7 b - - 2 42",
+  "setup": "Kh8",
+  "fen": "3r3k/5RR1/7P/4p3/8/5K2/1r3P2/q7 w - - 3 43",
+  "line": [
+   "Rh7+",
+   "Kg8",
+   "Rfg7+",
+   "Kf8",
+   "Rh8#"
+  ],
+  "tree": {
+   "Rh7+": {
+    "reply": "Kg8",
+    "next": {
+     "Rfg7+": {
+      "reply": "Kf8",
+      "next": {
+       "Rh8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/eqVAB"
+ },
+ {
+  "id": "BKTBm",
+  "rating": 920,
+  "popularity": 99,
+  "plays": 4195,
+  "themes": [
+   "backRankMate",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "sacrifice"
+  ],
+  "pieces": 14,
+  "setupFen": "1k2r3/ppp4Q/8/8/6PP/P3n3/1P1q4/1KR5 b - - 2 32",
+  "setup": "Nd1",
+  "fen": "1k2r3/ppp4Q/8/8/6PP/P7/1P1q4/1KRn4 w - - 3 33",
+  "line": [
+   "Qxc7+",
+   "Ka8",
+   "Qc8+",
+   "Rxc8",
+   "Rxc8#"
+  ],
+  "tree": {
+   "Qxc7+": {
+    "reply": "Ka8",
+    "next": {
+     "Qc8+": {
+      "reply": "Rxc8",
+      "next": {
+       "Rxc8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/BKTBm"
+ }
+]

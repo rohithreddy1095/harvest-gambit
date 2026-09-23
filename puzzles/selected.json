@@ -1,0 +1,121 @@
+[
+ {
+  "id": "SA3eo",
+  "rating": 1242,
+  "popularity": 100,
+  "plays": 3159,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3",
+   "rookEndgame"
+  ],
+  "pieces": 10,
+  "setupFen": "8/8/1R2R3/p4pk1/4p3/r5P1/6r1/1K6 b - - 0 41",
+  "setup": "Rf3",
+  "fen": "8/8/1R2R3/p4pk1/4p3/5rP1/6r1/1K6 w - - 1 42",
+  "line": [
+   "Rg6+",
+   "Kh5",
+   "Rh6+",
+   "Kg4",
+   "Rbg6#"
+  ],
+  "tree": {
+   "Rg6+": {
+    "reply": "Kh5",
+    "next": {
+     "Rh6+": {
+      "reply": "Kg4",
+      "next": {
+       "Rbg6#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/SA3eo"
+ },
+ {
+  "id": "Tuzwy",
+  "rating": 1296,
+  "popularity": 100,
+  "plays": 4246,
+  "themes": [
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 9,
+  "setupFen": "8/4r1p1/1R2N2k/p6n/8/r7/3K4/8 b - - 3 43",
+  "setup": "Kh7",
+  "fen": "8/4r1pk/1R2N3/p6n/8/r7/3K4/8 w - - 4 44",
+  "line": [
+   "Ng5+",
+   "Kh8",
+   "Rb8+",
+   "Re8",
+   "Rxe8#"
+  ],
+  "tree": {
+   "Ng5+": {
+    "reply": "Kh8",
+    "next": {
+     "Rb8+": {
+      "reply": "Re8",
+      "next": {
+       "Rxe8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/Tuzwy"
+ },
+ {
+  "id": "ZPT5l",
+  "rating": 1256,
+  "popularity": 100,
+  "plays": 3813,
+  "themes": [
+   "attraction",
+   "endgame",
+   "long",
+   "mate",
+   "mateIn3"
+  ],
+  "pieces": 11,
+  "setupFen": "2q3k1/5p1p/5rp1/7P/3Q1P1K/6P1/8/8 b - - 4 52",
+  "setup": "Qf5",
+  "fen": "6k1/5p1p/5rp1/5q1P/3Q1P1K/6P1/8/8 w - - 5 53",
+  "line": [
+   "Qd8+",
+   "Kg7",
+   "h6+",
+   "Kxh6",
+   "Qf8#"
+  ],
+  "tree": {
+   "Qd8+": {
+    "reply": "Kg7",
+    "next": {
+     "h6+": {
+      "reply": "Kxh6",
+      "next": {
+       "Qf8#": {
+        "mate": true
+       }
+      }
+     }
+    }
+   }
+  },
+  "url": "https://lichess.org/training/ZPT5l"
+ }
+]
